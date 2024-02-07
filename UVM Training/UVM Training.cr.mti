@@ -1,0 +1,1468 @@
+{{/home/denisa/Desktop/UVM Training/test_no_1.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_1.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:23 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_1.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_1.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_1.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_1.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_1.svh(16): Invalid type 'memory_sequence'. Please check the type of the variable 'mem_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_1.svh(16): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:24 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 4, Warnings: 0
+
+} {6.0 10.0} {}} {/home/denisa/Desktop/UVM Training/memory_driver.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_driver.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/control_agent_config.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_agent_config.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/config_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/config_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package config_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/config_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package base_pack
+** Warning: /home/denisa/Desktop/UVM Training/config_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/config_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/memory_agent_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:48 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_agent_pack.sv 
+-- Compiling package memory_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:49 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/port_interface.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:52 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_interface.sv 
+-- Compiling package port_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface port_interface
+
+Top level modules:
+	--none--
+End time: 15:55:52 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_no_11.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_11.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:25 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_11.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_11.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(16): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(18): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(36): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(37): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(39): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(39): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(39): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_11.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(46): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(46): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(46): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_11.svh(46): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(50): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(50): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_11.svh(50): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_11.svh(50): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:25 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0
+
+} {6.0 24.0} {}} {/home/denisa/Desktop/UVM Training/reset_agent_config.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_agent_config.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/port_sequencer.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_sequencer.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:22 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_sequencer.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_sequencer.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_sequencer.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+End time: 15:56:22 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {{/home/denisa/Desktop/UVM Training/testbench.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/testbench.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:53 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/testbench.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/testbench.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package testbench_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+End time: 15:55:53 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {/home/denisa/Desktop/UVM Training/memory_monitor.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_monitor.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/control_sequence.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:17 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_sequence.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(5): (vlog-2730) Undefined variable: 'data_packet'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(8): Invalid type 'data_packet'. Please check the type of the variable 'packet'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(15): Invalid type 'random_predefined_enum'. Please check the type of the variable 'random_DA'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(21): (vlog-2400) Identifier ('random_predefined_enum') found where a type or type identifier is required.
+End time: 15:56:18 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 4, Warnings: 0
+
+} {6.0 10.0} {}} {{/home/denisa/Desktop/UVM Training/memory_interface.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:51 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_interface.sv 
+-- Compiling package memory_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface memory_interface
+
+Top level modules:
+	--none--
+End time: 15:55:52 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/memory_covergroup.sv}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:19 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_covergroup.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+End time: 15:56:19 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {{/home/denisa/Desktop/UVM Training/control_agent_config.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:16 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_agent_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_agent_config.svh(5): Error in class extension specification.
+End time: 15:56:17 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/test_no_9.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_9.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:25 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_9.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_9.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(16): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(18): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(36): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(37): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(39): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(39): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(39): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_9.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(46): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(46): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(46): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_9.svh(46): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(50): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(50): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_9.svh(50): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_9.svh(50): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:25 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0
+
+} {6.0 24.0} {}} {/home/denisa/Desktop/UVM Training/item_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/item_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/item_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Warning: /home/denisa/Desktop/UVM Training/item_pack.sv(10): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/item_pack.sv(10): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/base_driver.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/base_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/base_driver.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/base_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:54 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/base_driver.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:54 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/virtual_sequence.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/virtual_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:26 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/virtual_sequence.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/virtual_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at /home/denisa/Desktop/UVM Training/virtual_sequence.svh(7)
+** at /home/denisa/Desktop/UVM Training/virtual_sequence.svh(7): Invalid type 'virtual_sequencer'. Please check the type of the variable 'p_sequencer'.
+** Error: /home/denisa/Desktop/UVM Training/virtual_sequence.svh(9): Invalid type 'port_sequence'. Please check the type of the variable 'port_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/virtual_sequence.svh(9): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:26 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 0
+
+} {6.0 7.0 8.0 10.0} {}} {/home/denisa/Desktop/UVM Training/seq_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/seq_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package seq_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/seq_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+** Warning: port_sequence.svh(37): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: /home/denisa/Desktop/UVM Training/seq_pack.sv(11): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/seq_pack.sv(11): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/control_agent.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:16 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_agent.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_agent.svh(5): Error in class extension specification.
+End time: 15:56:16 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/virtual_sequence.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/virtual_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/virtual_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at /home/denisa/Desktop/UVM Training/virtual_sequence.svh(7)
+** at /home/denisa/Desktop/UVM Training/virtual_sequence.svh(7): Invalid type 'virtual_sequencer'. Please check the type of the variable 'p_sequencer'.
+** Error: /home/denisa/Desktop/UVM Training/virtual_sequence.svh(9): Invalid type 'port_sequence'. Please check the type of the variable 'port_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/virtual_sequence.svh(9): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+
+} {4.0 5.0 6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/control_monitor.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:17 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_monitor.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_monitor.svh(5): Error in class extension specification.
+End time: 15:56:17 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/port_covergroup.sv} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {4.0 5.0} {}} {/home/denisa/Desktop/UVM Training/port_driver.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_driver.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/memory_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package memory_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface memory_interface
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/virtual_sequencer.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/virtual_sequencer.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:26 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/virtual_sequencer.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(8): Invalid type 'port_sequencer'. Please check the type of the variable 'port_seqr'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(8): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:26 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/test_no_6.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_6.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:24 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_6.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_6.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_6.svh(12): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_6.svh(14): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_6.svh(14): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:25 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 3, Warnings: 0
+
+} {6.0 9.0} {}} {/home/denisa/Desktop/UVM Training/base_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/base_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package base_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Warning: /home/denisa/Desktop/UVM Training/base_pack.sv(11): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/base_pack.sv(11): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/reset_monitor.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_monitor.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/control_driver.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:17 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_driver.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_driver.svh(5): Error in class extension specification.
+End time: 15:56:17 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/scoreboard.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/scoreboard.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:23 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/scoreboard.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/scoreboard.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(16): (vlog-2730) Undefined variable: 'control_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(17): (vlog-2730) Undefined variable: 'reset_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(18): (vlog-2730) Undefined variable: 'memory_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(20): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(25): Invalid type 'data_packet'. Please check the type of the variable 'data_pck_queue'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/scoreboard.svh(25): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:23 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 6, Warnings: 0
+
+} {6.0 12.0} {}} {{/home/denisa/Desktop/UVM Training/event_covergroup.sv}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/event_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:18 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/event_covergroup.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/event_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/event_covergroup.sv(5): near "port_itm_1": syntax error, unexpected IDENTIFIER, expecting ')'.
+End time: 15:56:18 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {{/home/denisa/Desktop/UVM Training/port_sequence.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:21 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_sequence.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(8): Invalid type 'port_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(33): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(33): (vlog-2164) Class or package 'port_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_sequence.svh(33): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:21 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 5, Warnings: 0
+
+} {6.0 11.0} {}} {/home/denisa/Desktop/UVM Training/memory_agent_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package memory_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/memory_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/base_agent_config.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/base_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/reset_driver.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:22 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_driver.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_driver.svh(5): Error in class extension specification.
+End time: 15:56:22 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/control_agent.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_agent.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/test.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:23 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test.svh(45): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(47): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(48): Invalid type 'reset_sequence'. Please check the type of the variable 'rst_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(49): Invalid type 'memory_sequence'. Please check the type of the variable 'mem_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(50): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(52): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(70): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(71): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(73): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(80): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2730) Undefined variable: 'mem_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2164) Class or package 'memory_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2730) Undefined variable: 'memory_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(84): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2730) Undefined variable: 'rst_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2164) Class or package 'reset_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2730) Undefined variable: 'reset_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(85): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(87): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:23 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 28, Warnings: 0
+
+} {6.0 34.0} {}} {{/home/denisa/Desktop/UVM Training/port_agent_config.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:20 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_agent_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_agent_config.svh(5): Error in class extension specification.
+End time: 15:56:20 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/memory_sequence.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:20 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_sequence.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(5): (vlog-2730) Undefined variable: 'memory_item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(8): Invalid type 'memory_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): (vlog-2164) Class or package 'memory_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(42): (vlog-2164) Class or package 'memory_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_sequence.svh(42): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:20 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 7, Warnings: 0
+
+} {6.0 13.0} {}} {/home/denisa/Desktop/UVM Training/data_packet.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/data_packet.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/data_packet.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/base_monitor.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/base_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:54 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/base_monitor.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:54 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/reset_interface.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:47 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_interface.sv 
+-- Compiling package reset_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface reset_interface
+
+Top level modules:
+	--none--
+End time: 15:55:47 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/memory_agent_config.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:19 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_agent_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_agent_config.svh(5): Error in class extension specification.
+End time: 15:56:19 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/config_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/config_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:48 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/config_pack.sv 
+-- Compiling package config_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/config_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package base_pack
+** Warning: /home/denisa/Desktop/UVM Training/config_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/config_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:48 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+} {} {}} {/home/denisa/Desktop/UVM Training/control_driver.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_driver.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/coverage.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/coverage.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:18 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/coverage.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/coverage.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/coverage.svh(8): near "#": syntax error, unexpected '#', expecting IDENTIFIER or '='.
+End time: 15:56:18 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {/home/denisa/Desktop/UVM Training/port_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package port_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface port_interface
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:52 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_pack.sv 
+-- Compiling package test_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package seq_pack
+-- Importing package base_pack
+-- Importing package config_pack
+-- Importing package env_pack
+-- Importing package reset_agent_pack
+-- Importing package control_agent_pack
+-- Importing package memory_agent_pack
+-- Importing package port_agent_pack
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(13)
+** at test_no_1.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test.svh(28), old value '3', new value '5') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(14)
+** at test_no_2.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_1.svh(5), old value '5', new value '8') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(15)
+** at test_no_4.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_2.svh(5), old value '8', new value '10') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(16)
+** at test_no_5.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_4.svh(5), old value '10', new value '1') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(18)
+** at test_no_7.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_5.svh(5), old value '1', new value '4') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(19)
+** at test_no_8.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_7.svh(5), old value '4', new value '8') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(20)
+** at test_no_9.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_8.svh(5), old value '8', new value '4') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(21)
+** at test_no_11.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_9.svh(5), old value '4', new value '15') .
+** Warning: ** while parsing file included at /home/denisa/Desktop/UVM Training/test_pack.sv(22)
+** at test_no_12.svh(5): (vlog-2263) Redefinition of macro: 'NO_OF_TESTS' (previously defined near test_no_11.svh(5), old value '15', new value '1') .
+** Warning: /home/denisa/Desktop/UVM Training/test_pack.sv(23): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/test_pack.sv(23): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:53 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 11
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/memory_agent.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:18 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_agent.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_agent.svh(5): Error in class extension specification.
+End time: 15:56:19 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/control_item.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:56 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_item.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:56 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/env_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/env_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:51 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/env_pack.sv 
+-- Compiling package env_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/env_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package seq_pack
+-- Importing package base_pack
+-- Importing package config_pack
+-- Importing package reset_agent_pack
+-- Importing package control_agent_pack
+-- Importing package memory_agent_pack
+-- Importing package port_agent_pack
+** Warning: /home/denisa/Desktop/UVM Training/env_pack.sv(30): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/env_pack.sv(30): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:51 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/memory_monitor.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:19 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_monitor.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_monitor.svh(5): Error in class extension specification.
+End time: 15:56:20 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/port_driver.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:21 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_driver.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_driver.svh(5): Error in class extension specification.
+End time: 15:56:21 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/control_monitor.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/control_monitor.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/port_agent_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:49 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_agent_pack.sv 
+-- Compiling package port_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/port_agent_pack.sv(14): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/port_agent_pack.sv(14): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:49 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/base_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/base_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:47 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/base_pack.sv 
+-- Compiling package base_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Warning: /home/denisa/Desktop/UVM Training/base_pack.sv(11): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/base_pack.sv(11): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:48 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2
+
+} {} {}} {/home/denisa/Desktop/UVM Training/memory_sequence.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(5): (vlog-2730) Undefined variable: 'memory_item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(8): Invalid type 'memory_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): (vlog-2164) Class or package 'memory_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_sequence.svh(31): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/memory_sequence.svh(42): (vlog-2164) Class or package 'memory_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_sequence.svh(42): near "::": syntax error, unexpected ::, expecting ';'.
+
+} {4.0 11.0} {}} {{/home/denisa/Desktop/UVM Training/reset_monitor.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:22 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_monitor.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_monitor.svh(5): Error in class extension specification.
+End time: 15:56:23 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/base_monitor.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/base_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_no_8.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_8.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:25 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_8.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_8.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_8.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_8.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_8.svh(15): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:25 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 0
+
+} {6.0 9.0} {}} {{/home/denisa/Desktop/UVM Training/memory_driver.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:19 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_driver.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_driver.svh(5): Error in class extension specification.
+End time: 15:56:19 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/memory_covergroup.sv} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {4.0 5.0} {}} {{/home/denisa/Desktop/UVM Training/data_covergroup.sv}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/data_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:18 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/data_covergroup.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/data_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/data_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+End time: 15:56:18 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {/home/denisa/Desktop/UVM Training/data_covergroup.sv} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/data_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/data_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/data_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {4.0 5.0} {}} {{/home/denisa/Desktop/UVM Training/base_agent_config.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/base_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:53 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/base_agent_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:54 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {/home/denisa/Desktop/UVM Training/memory_item.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/reset_agent_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:49 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_agent_pack.sv 
+-- Compiling package reset_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:50 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_no_5.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_5.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:24 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_5.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_5.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(16): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(18): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(36): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(37): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(39): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(39): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(39): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_5.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(46): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(46): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(46): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_5.svh(46): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(50): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(50): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_5.svh(50): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_5.svh(50): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:24 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0
+
+} {6.0 24.0} {}} {{/home/denisa/Desktop/UVM Training/port_covergroup.sv}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:21 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_covergroup.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+End time: 15:56:21 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {/home/denisa/Desktop/UVM Training/reset_agent.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_agent.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/virtual_sequencer.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/virtual_sequencer.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(8): Invalid type 'port_sequencer'. Please check the type of the variable 'port_seqr'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/virtual_sequencer.svh(8): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/control_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package control_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface control_interface
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/port_agent.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(8): Invalid type 'port_sequencer'. Please check the type of the variable 'seqr'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(9): Invalid type 'port_driver'. Please check the type of the variable 'drv'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(10): Invalid type 'port_monitor'. Please check the type of the variable 'mon'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(12): Invalid type 'port_agent_config'. Please check the type of the variable 'agent_config_h'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(31): (vlog-2730) Undefined variable: 'port_agent_config'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2730) Undefined variable: 'seqr'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2164) Class or package 'port_sequencer' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2730) Undefined variable: 'port_sequencer'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(38): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2730) Undefined variable: 'drv'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2164) Class or package 'port_driver' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2730) Undefined variable: 'port_driver'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2730) Undefined variable: 'mon'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2164) Class or package 'port_monitor' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2730) Undefined variable: 'port_monitor'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(44): near "::": syntax error, unexpected ::, expecting ';'.
+
+} {4.0 21.0} {}} {{/home/denisa/Desktop/UVM Training/port_item.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:01 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_item.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:56:01 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/reset_sequence.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:23 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_sequence.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(5): (vlog-2730) Undefined variable: 'reset_item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(8): Invalid type 'reset_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): (vlog-2164) Class or package 'reset_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(35): (vlog-2164) Class or package 'reset_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_sequence.svh(35): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:23 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 7, Warnings: 0
+
+} {6.0 13.0} {}} {/home/denisa/Desktop/UVM Training/reset_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package reset_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface reset_interface
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/memory_agent_config.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_agent_config.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/environment.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/environment.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:18 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/environment.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/environment.svh(24): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(31): Invalid type 'reset_agent'. Please check the type of the variable 'rst_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(32): Invalid type 'control_agent'. Please check the type of the variable 'ctrl_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(33): Invalid type 'memory_agent'. Please check the type of the variable 'mem_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(34): Invalid type 'port_agent'. Please check the type of the variable 'prt_agent'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/environment.svh(34): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:18 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 5, Warnings: 0
+
+} {6.0 11.0} {}} {/home/denisa/Desktop/UVM Training/control_agent_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package control_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/control_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/control_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_no_2.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_2.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:24 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_2.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_2.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_2.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_2.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_2.svh(15): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:24 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 0
+
+} {6.0 9.0} {}} {/home/denisa/Desktop/UVM Training/port_sequence.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(8): Invalid type 'port_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(33): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_sequence.svh(33): (vlog-2164) Class or package 'port_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_sequence.svh(33): near "::": syntax error, unexpected ::, expecting ';'.
+
+} {4.0 9.0} {}} {{/home/denisa/Desktop/UVM Training/test_no_12.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_12.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:25 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_12.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_12.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(16): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(18): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(36): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(37): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(39): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(39): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(39): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_12.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(46): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(46): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(46): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_12.svh(46): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(50): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(50): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_12.svh(50): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_12.svh(50): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:26 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 18, Warnings: 0
+
+} {6.0 24.0} {}} {{/home/denisa/Desktop/UVM Training/reset_agent_config.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:22 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_agent_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_agent_config.svh(5): Error in class extension specification.
+End time: 15:56:22 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/memory_item.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/memory_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:59 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/memory_item.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:59 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/port_coverage.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_coverage.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:20 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_coverage.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_coverage.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(8): Invalid type 'port_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(23): (vlog-2400) Identifier ('port_item') found where a type or type identifier is required.
+End time: 15:56:21 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 3, Warnings: 0
+
+} {6.0 9.0} {}} {/home/denisa/Desktop/UVM Training/test.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/test.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test.svh(45): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(47): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(48): Invalid type 'reset_sequence'. Please check the type of the variable 'rst_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(49): Invalid type 'memory_sequence'. Please check the type of the variable 'mem_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(50): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(52): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(70): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(71): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(73): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(73): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(80): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(80): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2730) Undefined variable: 'mem_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2164) Class or package 'memory_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(84): (vlog-2730) Undefined variable: 'memory_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(84): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2730) Undefined variable: 'rst_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2164) Class or package 'reset_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(85): (vlog-2730) Undefined variable: 'reset_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(85): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test.svh(87): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test.svh(87): near "::": syntax error, unexpected ::, expecting ';'.
+
+} {4.0 32.0} {}} {/home/denisa/Desktop/UVM Training/port_coverage.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_coverage.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_coverage.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(8): Invalid type 'port_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/port_coverage.svh(23): (vlog-2400) Identifier ('port_item') found where a type or type identifier is required.
+
+} {4.0 7.0} {}} {{/home/denisa/Desktop/UVM Training/data_packet.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/data_packet.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:57 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/data_packet.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/data_packet.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:57 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {/home/denisa/Desktop/UVM Training/design.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/design.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module switch
+-- Compiling module fifo
+-- Compiling module port_fsm
+
+Top level modules:
+	switch
+
+} {} {}} {/home/denisa/Desktop/UVM Training/environment_config.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/environment_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/environment_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/port_item.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/coverage.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/coverage.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/coverage.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/coverage.svh(8): near "#": syntax error, unexpected '#', expecting IDENTIFIER or '='.
+
+} {4.0 5.0} {}} {/home/denisa/Desktop/UVM Training/port_monitor.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_monitor.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/control_agent_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:48 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_agent_pack.sv 
+-- Compiling package control_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/control_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/control_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:48 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+} {} {}} {/home/denisa/Desktop/UVM Training/environment.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/environment.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/environment.svh(24): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(31): Invalid type 'reset_agent'. Please check the type of the variable 'rst_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(32): Invalid type 'control_agent'. Please check the type of the variable 'ctrl_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(33): Invalid type 'memory_agent'. Please check the type of the variable 'mem_agent'.
+** Error: /home/denisa/Desktop/UVM Training/environment.svh(34): Invalid type 'port_agent'. Please check the type of the variable 'prt_agent'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/environment.svh(34): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+
+} {4.0 9.0} {}} {/home/denisa/Desktop/UVM Training/env_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/env_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package env_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/env_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package seq_pack
+-- Importing package base_pack
+-- Importing package config_pack
+-- Importing package reset_agent_pack
+-- Importing package control_agent_pack
+-- Importing package memory_agent_pack
+-- Importing package port_agent_pack
+** Warning: /home/denisa/Desktop/UVM Training/env_pack.sv(30): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/env_pack.sv(30): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/seq_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/seq_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:46 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/seq_pack.sv 
+-- Compiling package seq_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/seq_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+** Warning: port_sequence.svh(37): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: /home/denisa/Desktop/UVM Training/seq_pack.sv(11): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/seq_pack.sv(11): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:47 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 3
+
+} {} {}} {/home/denisa/Desktop/UVM Training/port_sequencer.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_sequencer.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_sequencer.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_sequencer.svh(5): (vlog-2730) Undefined variable: 'port_item'.
+
+} {4.0 5.0} {}} {/home/denisa/Desktop/UVM Training/port_agent_config.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_agent_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent_config.svh(5): near "base_agent_config": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_agent_config.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {/home/denisa/Desktop/UVM Training/base_agent.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/base_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(8): (vlog-2730) Undefined variable: 'base_agent_config'.
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(11): (vlog-2730) Undefined variable: 'base_driver'.
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(12): (vlog-2730) Undefined variable: 'base_monitor'.
+
+} {4.0 7.0} {}} {{/home/denisa/Desktop/UVM Training/base_agent.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/base_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:16 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/base_agent.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/base_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(8): (vlog-2730) Undefined variable: 'base_agent_config'.
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(11): (vlog-2730) Undefined variable: 'base_driver'.
+** Error: /home/denisa/Desktop/UVM Training/base_agent.svh(12): (vlog-2730) Undefined variable: 'base_monitor'.
+End time: 15:56:16 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 0
+
+} {6.0 9.0} {}} {/home/denisa/Desktop/UVM Training/control_sequence.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(5): (vlog-2730) Undefined variable: 'data_packet'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(8): Invalid type 'data_packet'. Please check the type of the variable 'packet'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(15): Invalid type 'random_predefined_enum'. Please check the type of the variable 'random_DA'.
+** Error: /home/denisa/Desktop/UVM Training/control_sequence.svh(21): (vlog-2400) Identifier ('random_predefined_enum') found where a type or type identifier is required.
+
+} {4.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/control_interface.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_interface.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:50 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_interface.sv 
+-- Compiling package control_interface_sv_unit
+-- Importing package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface control_interface
+
+Top level modules:
+	--none--
+End time: 15:55:51 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/environment_config.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/environment_config.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:50 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/environment_config.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/environment_config.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:55:50 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/test_no_7.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_7.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:25 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_7.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_7.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(16): Invalid type 'virtual_sequence'. Please check the type of the variable 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(18): Invalid type 'environment_config'. Please check the type of the variable 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(36): (vlog-2730) Undefined variable: 'env_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(37): (vlog-2730) Undefined variable: 'environment_config'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(39): (vlog-2730) Undefined variable: 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(39): (vlog-2164) Class or package 'environment' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(39): (vlog-2730) Undefined variable: 'environment'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_7.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(46): (vlog-2730) Undefined variable: 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(46): (vlog-2164) Class or package 'control_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(46): (vlog-2730) Undefined variable: 'control_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_7.svh(46): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(50): (vlog-2730) Undefined variable: 'v_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(50): (vlog-2164) Class or package 'virtual_sequence' not found.
+** Error: /home/denisa/Desktop/UVM Training/test_no_7.svh(50): (vlog-2730) Undefined variable: 'virtual_sequence'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_7.svh(50): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:25 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0
+
+} {6.0 24.0} {}} {{/home/denisa/Desktop/UVM Training/port_agent.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:20 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_agent.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(8): Invalid type 'port_sequencer'. Please check the type of the variable 'seqr'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(9): Invalid type 'port_driver'. Please check the type of the variable 'drv'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(10): Invalid type 'port_monitor'. Please check the type of the variable 'mon'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(12): Invalid type 'port_agent_config'. Please check the type of the variable 'agent_config_h'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(31): (vlog-2730) Undefined variable: 'port_agent_config'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2730) Undefined variable: 'seqr'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2164) Class or package 'port_sequencer' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(38): (vlog-2730) Undefined variable: 'port_sequencer'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(38): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2730) Undefined variable: 'drv'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2164) Class or package 'port_driver' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(39): (vlog-2730) Undefined variable: 'port_driver'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(39): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2730) Undefined variable: 'mon'.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2164) Class or package 'port_monitor' not found.
+** Error: /home/denisa/Desktop/UVM Training/port_agent.svh(44): (vlog-2730) Undefined variable: 'port_monitor'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_agent.svh(44): near "::": syntax error, unexpected ::, expecting ';'.
+End time: 15:56:20 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 17, Warnings: 0
+
+} {6.0 23.0} {}} {/home/denisa/Desktop/UVM Training/reset_sequence.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_sequence.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_sequence.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(5): (vlog-2730) Undefined variable: 'reset_item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(8): Invalid type 'reset_item'. Please check the type of the variable 'item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): (vlog-2730) Undefined variable: 'item'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): (vlog-2164) Class or package 'reset_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_sequence.svh(30): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: /home/denisa/Desktop/UVM Training/reset_sequence.svh(35): (vlog-2164) Class or package 'reset_item' not found.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_sequence.svh(35): near "::": syntax error, unexpected ::, expecting ';'.
+
+} {4.0 11.0} {}} {/home/denisa/Desktop/UVM Training/control_covergroup.sv} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {4.0 5.0} {}} {{/home/denisa/Desktop/UVM Training/control_covergroup.sv}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/control_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:17 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/control_covergroup.sv 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/control_covergroup.sv(5): near "item": syntax error, unexpected IDENTIFIER, expecting ')'.
+End time: 15:56:17 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {6.0 7.0} {}} {/home/denisa/Desktop/UVM Training/scoreboard.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/scoreboard.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/scoreboard.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(16): (vlog-2730) Undefined variable: 'control_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(17): (vlog-2730) Undefined variable: 'reset_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(18): (vlog-2730) Undefined variable: 'memory_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(20): (vlog-2730) Undefined variable: 'port_item'.
+** Error: /home/denisa/Desktop/UVM Training/scoreboard.svh(25): Invalid type 'data_packet'. Please check the type of the variable 'data_pck_queue'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/scoreboard.svh(25): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+
+} {4.0 10.0} {}} {{/home/denisa/Desktop/UVM Training/port_monitor.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/port_monitor.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:21 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/port_monitor.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_monitor.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/port_monitor.svh(5): near "base_monitor": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/port_monitor.svh(5): Error in class extension specification.
+End time: 15:56:21 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {{/home/denisa/Desktop/UVM Training/item_pack.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/item_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:46 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/item_pack.sv 
+-- Compiling package item_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/item_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Warning: /home/denisa/Desktop/UVM Training/item_pack.sv(10): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/item_pack.sv(10): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+End time: 15:55:46 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+} {} {}} {/home/denisa/Desktop/UVM Training/event_covergroup.sv} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/event_covergroup.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/event_covergroup.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/event_covergroup.sv(5): near "port_itm_1": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {4.0 5.0} {}} {/home/denisa/Desktop/UVM Training/reset_driver.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_driver.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_driver.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_driver.svh(5): near "base_driver": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_driver.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/test_no_4.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/test_no_4.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:24 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/test_no_4.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/test_no_4.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: /home/denisa/Desktop/UVM Training/test_no_4.svh(13): Invalid type 'environment'. Please check the type of the variable 'env'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_4.svh(15): Invalid type 'control_sequence'. Please check the type of the variable 'ctrl_seq'.
+** Error: /home/denisa/Desktop/UVM Training/test_no_4.svh(16): Invalid type 'memory_sequence'. Please check the type of the variable 'mem_seq'.
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/test_no_4.svh(16): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+End time: 15:56:24 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 4, Warnings: 0
+
+} {6.0 10.0} {}} {/home/denisa/Desktop/UVM Training/reset_agent_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package reset_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(13): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/reset_agent_pack.sv(13): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/control_item.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/control_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/control_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {/home/denisa/Desktop/UVM Training/memory_agent.svh} {0 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/memory_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/memory_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/memory_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/memory_agent.svh(5): Error in class extension specification.
+
+} {4.0 6.0} {}} {{/home/denisa/Desktop/UVM Training/reset_item.svh}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:02 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_item.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 15:56:03 on Jan 30,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {/home/denisa/Desktop/UVM Training/port_agent_pack.sv} {2 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/port_agent_pack.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package port_agent_pack
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/port_agent_pack.sv(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package item_pack
+-- Importing package base_pack
+-- Importing package config_pack
+** Warning: /home/denisa/Desktop/UVM Training/port_agent_pack.sv(14): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/denisa/Desktop/UVM Training/port_agent_pack.sv(14): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/reset_agent.svh}} {0 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/reset_agent.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:56:22 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/reset_agent.svh 
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_agent.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: (vlog-13069) /home/denisa/Desktop/UVM Training/reset_agent.svh(5): near "base_agent": syntax error, unexpected IDENTIFIER.
+** Error: /home/denisa/Desktop/UVM Training/reset_agent.svh(5): Error in class extension specification.
+End time: 15:56:22 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 0
+
+} {6.0 8.0} {}} {/home/denisa/Desktop/UVM Training/reset_item.svh} {1 {vlog -work work -vopt -sv -stats=none {/home/denisa/Desktop/UVM Training/reset_item.svh}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+** Note: (vlog-2286) /home/denisa/Desktop/UVM Training/reset_item.svh(3): Using implicit +incdir+/opt/questa/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {{/home/denisa/Desktop/UVM Training/design.sv}} {1 {vlog -work work -vopt -sv {/home/denisa/Desktop/UVM Training/design.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:55:46 on Jan 30,2024
+vlog -reportprogress 300 -work work -vopt -sv /home/denisa/Desktop/UVM Training/design.sv 
+-- Compiling module switch
+-- Compiling module fifo
+-- Compiling module port_fsm
+
+Top level modules:
+	switch
+End time: 15:55:46 on Jan 30,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}}
