@@ -1,0 +1,4 @@
+git clone https://github.com/NAME/REPOSITORYNAME #clone the repository in the current directory
+git add . #add all changes
+git commit -m "Write something." #commit all the changes on the local repository
+git push origin main #push all the commits on the remote repository
