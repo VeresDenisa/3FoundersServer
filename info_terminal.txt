@@ -1,0 +1,16 @@
+git clone https://github.com/NAME/REPOSITORYNAME  #clone the repository in the current directory
+git add .                                         #add all changes to the commit area
+git commit -m "Write something."                  #commit all the changes on the local repository
+git push origin main                              #push all the commits on the remote repository
+
+
+CTRL + C          #stop current process
+TAB -> TAB        #list all posibilities
+CTRL + SHIFT + C  #copy from terminal
+CTRL + SHIFT + V  #paste in terminal
+
+
+pwd        #print working directory
+ls         #list content of directory
+cd         #go to ... (.. - one level up, blank - home)
+chmode +x  #make file executable (r - readable, w - writable)
