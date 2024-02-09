@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class control_monitor extends base_monitor #(.name("control_monitor"));
   `uvm_component_utils(control_monitor);
   

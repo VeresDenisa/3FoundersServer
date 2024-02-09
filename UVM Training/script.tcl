@@ -10,9 +10,9 @@ foreach {test} $argv {
 
      if { [lsearch $testlist $test] >= 0 } {
 
-          puts "Start testing testcase $i..." 
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Start testing testcase $i..." 
 
-          puts "$test: Testcase found. Executing..."  
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Testcase found. Executing..."  
 
 
           set scriptfile [open "script.do" w+]
@@ -23,7 +23,7 @@ foreach {test} $argv {
 
           exec "./script.do"
 
-          puts "$test: Compilation success. Running ..."
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Compilation success. Running ..."
 
 
           set scriptfile [open "script.do" w+]
@@ -37,7 +37,7 @@ foreach {test} $argv {
 
           file copy -force transcript log/transcript_$test.log
 
-          puts "$test: Transcript saved."
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Transcript saved."
 
 
           set scriptfile [open "script.do" w+]
@@ -48,11 +48,11 @@ foreach {test} $argv {
 
           exec "./script.do"
 
-          puts "$test: Coverage saved."
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Coverage saved."
 
 
-          puts "$test: Testcase done. Closing..." 
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Testcase $i done. Closing..." 
 
-     } else { puts "Testcase $i $test not found! Testcase skipped!" }
+     } else { puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Testcase $i $test not found! Testcase skipped!" }
      incr i 1
 }

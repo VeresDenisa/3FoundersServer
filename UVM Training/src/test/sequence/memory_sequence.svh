@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class memory_sequence extends uvm_sequence #(memory_item);
   `uvm_object_utils(memory_sequence)
   

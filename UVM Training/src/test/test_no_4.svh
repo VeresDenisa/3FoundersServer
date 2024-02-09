@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 `define NO_OF_TESTS 10
 `define NO_OF_PORTS 4
 

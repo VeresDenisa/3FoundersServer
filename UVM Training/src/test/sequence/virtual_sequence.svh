@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class virtual_sequence extends uvm_sequence;
   `uvm_object_utils(virtual_sequence);
   `uvm_declare_p_sequencer(virtual_sequencer);

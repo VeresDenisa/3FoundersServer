@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 /*-----------------------------------------------------------------------------------------
 
      --- SS Testing with UVM --- SMOKE TEST ---

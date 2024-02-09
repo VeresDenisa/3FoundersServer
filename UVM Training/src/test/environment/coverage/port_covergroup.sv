@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 covergroup port_covergroup (ref port_item item);
   option.per_instance = 0;
   option.get_inst_coverage = 1;

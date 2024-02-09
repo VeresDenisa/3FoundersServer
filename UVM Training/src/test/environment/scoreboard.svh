@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 `uvm_analysis_imp_decl(_control)
 `uvm_analysis_imp_decl(_memory)
 `uvm_analysis_imp_decl(_reset)

@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class control_agent extends base_agent 
   #(
   .name("control_agent"), 

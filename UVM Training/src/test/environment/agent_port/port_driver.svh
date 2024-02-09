@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class port_driver extends base_driver #(.name("port_driver"), .ss_item(port_item));
   `uvm_component_utils(port_driver);
   

@@ -20,10 +20,6 @@ the port's sequencers are connected to the virtual sequencer.
 
 -----------------------------------------------------------------------------------------*/
 
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
-
 
 class environment extends uvm_env;
   `uvm_component_utils(environment);
@@ -37,11 +33,6 @@ class environment extends uvm_env;
   
   scoreboard scb;
   coverage   cov;
-  
-  port_coverage#(.port_nr(0)) port_0_cov;
-  port_coverage#(.port_nr(1)) port_1_cov;
-  port_coverage#(.port_nr(2)) port_2_cov;
-  port_coverage#(.port_nr(3)) port_3_cov;
   
   environment_config   env_config;
   
@@ -57,7 +48,6 @@ class environment extends uvm_env;
   
   extern function void build_phase(uvm_phase phase);
   extern function void connect_phase(uvm_phase phase);
-  extern function void report_phase(uvm_phase phase);
 endclass : environment
 
 
@@ -93,11 +83,6 @@ function void environment::build_phase(uvm_phase phase);
   scb = scoreboard::type_id::create("scb", this);
   cov = coverage::  type_id::create("cov", this);  
   
-  port_0_cov = port_coverage#(.port_nr(0))::type_id::create("port_0_cov", this);
-  port_1_cov = port_coverage#(.port_nr(1))::type_id::create("port_1_cov", this);
-  port_2_cov = port_coverage#(.port_nr(2))::type_id::create("port_2_cov", this);
-  port_3_cov = port_coverage#(.port_nr(3))::type_id::create("port_3_cov", this);
-  
   `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
@@ -105,11 +90,6 @@ function void environment::connect_phase(uvm_phase phase);
   foreach(prt_agent[i]) begin
     v_seqr.port_seqr[i] = prt_agent[i].seqr;
   end
-
-  prt_agent[0].mon.an_port.connect(port_0_cov.analysis_export);
-  prt_agent[1].mon.an_port.connect(port_1_cov.analysis_export);
-  prt_agent[2].mon.an_port.connect(port_2_cov.analysis_export);
-  prt_agent[3].mon.an_port.connect(port_3_cov.analysis_export);
     
   ctrl_agent.mon.an_port.connect(scb.an_port_control);
   mem_agent.mon.an_port.connect(scb.an_port_memory);
@@ -129,14 +109,3 @@ function void environment::connect_phase(uvm_phase phase);
   mem_agent.mon.an_port.connect(cov.an_port_memory);
   rst_agent.mon.an_port.connect(cov.an_port_reset);
 endfunction : connect_phase
-    
-    
-
-function void environment::report_phase(uvm_phase phase);
-  `uvm_info(this.get_name(), $sformatf("---> EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
-  `uvm_info(this.get_name(), $sformatf("Port 0 Coverage = %.2f%%", port_0_cov.port_cvg.get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Port 1 Coverage = %.2f%%", port_1_cov.port_cvg.get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Port 2 Coverage = %.2f%%", port_2_cov.port_cvg.get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Port 3 Coverage = %.2f%%", port_3_cov.port_cvg.get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
-endfunction : report_phase

@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 typedef enum bit { MEMORY_WRITE  = 1'b1, MEMORY_IDLE  = 1'b0 } memory_write_idle_enum;
 
 class memory_item extends uvm_sequence_item;

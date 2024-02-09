@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class reset_item extends uvm_sequence_item;
   `uvm_object_utils(reset_item);
   

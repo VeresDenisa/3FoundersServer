@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class reset_monitor extends base_monitor #(.name("reset_monitor"));
   `uvm_component_utils(reset_monitor)
   

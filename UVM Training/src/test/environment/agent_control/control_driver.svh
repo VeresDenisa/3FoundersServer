@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class control_driver extends base_driver #(.name("control_driver"), .ss_item(data_packet));
   `uvm_component_utils(control_driver);
   

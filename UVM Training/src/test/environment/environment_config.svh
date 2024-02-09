@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 typedef enum bit { CLUSTER = 1'b1, UNIT   = 1'b0 } cluster_unit_enum;
 
 class environment_config;

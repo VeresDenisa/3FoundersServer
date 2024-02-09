@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 typedef enum bit { PREDEFINED  = 1'b1, RANDOM  = 1'b0 } random_predefined_enum;
 
 class data_packet extends uvm_sequence_item;

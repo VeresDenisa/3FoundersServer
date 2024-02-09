@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class port_monitor extends base_monitor #(.name("port_monitor"));
   `uvm_component_utils(port_monitor)
   

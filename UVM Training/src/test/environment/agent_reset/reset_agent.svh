@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class reset_agent extends base_agent 
   #(
   .name("reset_agent"), 

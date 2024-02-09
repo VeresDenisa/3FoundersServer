@@ -23,7 +23,6 @@ package env_pack;
   `include "src/test/environment/coverage/data_covergroup.sv"
   `include "src/test/environment/coverage/event_covergroup.sv" 
 
-  `include "src/test/environment/coverage/port_coverage.svh"
   `include "src/test/environment/coverage/coverage.svh"
 
   `include "src/test/environment/environment.svh"

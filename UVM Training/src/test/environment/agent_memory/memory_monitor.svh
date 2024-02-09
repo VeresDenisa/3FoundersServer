@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class memory_monitor extends base_monitor #(.name("memory_monitor"));
   `uvm_component_utils(memory_monitor)
   

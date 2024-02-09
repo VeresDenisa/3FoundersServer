@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 covergroup memory_covergroup (ref memory_item item);
   mem_data_cvp :  coverpoint item.mem_data  { bins value_0_FF[]   = {0, 85, 170, 255}; }
   mem_add_cvp :   coverpoint item.mem_add   { bins value_0_4[]    = {0, 1, 2, 3}; }

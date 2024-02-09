@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class control_item extends uvm_sequence_item;
   `uvm_object_utils(control_item);
   

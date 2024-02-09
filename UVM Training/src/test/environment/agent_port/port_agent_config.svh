@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class port_agent_config extends base_agent_config;
   protected int port_number;
   

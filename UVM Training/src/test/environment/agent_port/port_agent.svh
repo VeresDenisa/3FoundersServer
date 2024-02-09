@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class port_agent extends uvm_agent;
   `uvm_component_utils(port_agent);
   

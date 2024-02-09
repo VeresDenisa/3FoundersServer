@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class memory_driver extends base_driver #(.name("memory_driver"), .ss_item(memory_item));
   `uvm_component_utils(memory_driver);
   

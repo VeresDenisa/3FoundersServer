@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class coverage extends uvm_component;
   `uvm_component_utils(coverage);
   

@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class reset_driver extends base_driver #(.name("reset_driver"), .ss_item(reset_item));
   `uvm_component_utils(reset_driver);
   

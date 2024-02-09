@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 `define NO_OF_PORTS 4
 
 class test_no_6 extends uvm_test;

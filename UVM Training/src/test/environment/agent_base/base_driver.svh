@@ -1,7 +1,3 @@
-
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-  
 class base_driver#(string name = "base_driver", type ss_item = uvm_sequence_item) extends uvm_driver #(ss_item);
   `uvm_component_utils(base_driver)
 
