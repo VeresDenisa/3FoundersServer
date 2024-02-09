@@ -1,5 +1,5 @@
 # vsim -c -classdebug -voptargs="+acc" "+UVM_TESTNAME=test_no_3" "+UVM_VERBOSITY=LOW" work.testbench -do "coverage save -onexit saved.ucdb; run -all; quit -f; exit" 
-# Start time: 12:11:08 on Feb 09,2024
+# Start time: 12:46:46 on Feb 09,2024
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c linux_x86_64 Aug 17 2018
@@ -84,5 +84,5 @@
 # ** Note: $finish    : /opt/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
 #    Time: 0 ns  Iteration: 0  Instance: /testbench
 # Saving coverage database on exit...
-# End time: 12:11:11 on Feb 09,2024, Elapsed time: 0:00:03
+# End time: 12:46:49 on Feb 09,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0

@@ -32,7 +32,7 @@ function void control_sequence::set_parameters(int nr_items = 1, int min_length 
   this.no_random  = no_random;
 endfunction : set_parameters
     
-    function void control_sequence::set_status_low(int duration = 1, int position = 1, int enable_status_low = 0);
+function void control_sequence::set_status_low(int duration = 1, int position = 1, int enable_status_low = 0);
   this.duration = duration;
   this.enable_status_low = enable_status_low;
   this.position = position;
@@ -49,7 +49,7 @@ task control_sequence::body();
     packet.set_parameters(.min_length(min_length), .max_length(max_length), .memory_data(memory_data), .random_DA(random_DA));
     if(no_random == 0) begin
     	if(!packet.randomize())
-      		`uvm_error(this.get_name(), "Failed andomization");
+      		`uvm_error(this.get_name(), "Failed randomization");
     end
     else packet.set_all(memory_data[i%4], memory_data[i%4], memory_data[i%4], memory_data[i%4]);
     if(enable_status_low != 0)

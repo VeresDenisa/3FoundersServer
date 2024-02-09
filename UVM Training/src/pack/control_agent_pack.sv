@@ -10,4 +10,4 @@ package control_agent_pack;
   `include "src/test/environment/agent_control/control_monitor.svh"
 
   `include "src/test/environment/agent_control/control_agent.svh"
-endpackage : control_agent_pack;
+endpackage : control_agent_pack

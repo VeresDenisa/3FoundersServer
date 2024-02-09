@@ -8,4 +8,4 @@ package base_pack;
   `include "src/test/environment/agent_base/base_monitor.svh"
   
   `include "src/test/environment/agent_base/base_agent.svh"
-endpackage : base_pack;
+endpackage : base_pack

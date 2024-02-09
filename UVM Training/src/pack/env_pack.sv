@@ -26,4 +26,4 @@ package env_pack;
   `include "src/test/environment/coverage/coverage.svh"
 
   `include "src/test/environment/environment.svh"
-endpackage : env_pack;
+endpackage : env_pack

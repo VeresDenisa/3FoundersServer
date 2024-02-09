@@ -21,4 +21,4 @@ package test_pack;
   `include "src/test/test_no_11.svh"
   `include "src/test/test_no_12.svh"
 
-endpackage : test_pack;
+endpackage : test_pack

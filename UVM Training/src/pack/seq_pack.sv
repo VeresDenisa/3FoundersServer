@@ -8,4 +8,4 @@ package seq_pack;
   `include "src/test/sequence/memory_sequence.svh"
   `include "src/test/sequence/reset_sequence.svh"
   `include "src/test/sequence/port_sequence.svh"
-endpackage : seq_pack;
+endpackage : seq_pack

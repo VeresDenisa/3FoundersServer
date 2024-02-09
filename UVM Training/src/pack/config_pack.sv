@@ -10,4 +10,4 @@ package config_pack;
   `include "src/test/environment/agent_memory/memory_agent_config.svh"
   `include "src/test/environment/agent_control/control_agent_config.svh"
   `include "src/test/environment/agent_port/port_agent_config.svh"
-endpackage : config_pack;
+endpackage : config_pack

@@ -10,4 +10,4 @@ package reset_agent_pack;
   `include "src/test/environment/agent_reset/reset_monitor.svh"
 
   `include "src/test/environment/agent_reset/reset_agent.svh"
-endpackage : reset_agent_pack;
+endpackage : reset_agent_pack

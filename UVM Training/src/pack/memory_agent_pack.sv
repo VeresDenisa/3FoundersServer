@@ -10,4 +10,4 @@ package memory_agent_pack;
   `include "src/test/environment/agent_memory/memory_monitor.svh"
 
   `include "src/test/environment/agent_memory/memory_agent.svh"
-endpackage : memory_agent_pack;
+endpackage : memory_agent_pack

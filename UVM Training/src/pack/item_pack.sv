@@ -7,4 +7,4 @@ package item_pack;
   `include "src/test/item/memory_item.svh"
   `include "src/test/item/reset_item.svh"
   `include "src/test/item/port_item.svh"
-endpackage : item_pack;
+endpackage : item_pack
