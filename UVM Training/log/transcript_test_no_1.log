@@ -1,0 +1,270 @@
+# vsim -c -classdebug -voptargs="+acc" "+UVM_TESTNAME=test_no_1" "+UVM_VERBOSITY=LOW" work.testbench -do "coverage save -onexit saved.ucdb; run -all; quit -f; exit" 
+# Start time: 12:10:40 on Feb 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.port_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.base_pack(fast)
+# Loading work.config_pack(fast)
+# Loading work.item_pack(fast)
+# Loading work.port_agent_pack(fast)
+# Loading work.memory_interface(fast)
+# Loading work.memory_agent_pack(fast)
+# Loading work.control_interface(fast)
+# Loading work.control_agent_pack(fast)
+# Loading work.reset_interface(fast)
+# Loading work.reset_agent_pack(fast)
+# Loading work.seq_pack(fast)
+# Loading work.env_pack(fast)
+# Loading work.test_pack(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.testbench(fast)
+# Loading work.reset_interface_sv_unit(fast)
+# Loading work.reset_interface(fast)
+# Loading work.memory_interface_sv_unit(fast)
+# Loading work.memory_interface(fast)
+# Loading work.control_interface_sv_unit(fast)
+# Loading work.control_interface(fast)
+# Loading work.port_interface_sv_unit(fast)
+# Loading work.port_interface(fast)
+# Loading work.switch(fast)
+# Loading work.fifo(fast)
+# Loading work.port_fsm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /opt/questa/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# coverage save -onexit saved.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test test_no_1...
+# Warning: In instance '\/env_pack::coverage::event_cvg ' the 'option.per_instance' is set to '0' (false). Assignment to members 'weight', 'goal' and 'comment' of 'option' would not have any effect.
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test_no_1                   -     @496 
+#   env                        environment                 -     @507 
+#     cov                      coverage                    -     @729 
+#       an_port_control        uvm_analysis_imp_control    -     @768 
+#       an_port_memory         uvm_analysis_imp_memory     -     @784 
+#       an_port_port_0         uvm_analysis_imp_port_0     -     @736 
+#       an_port_port_1         uvm_analysis_imp_port_1     -     @744 
+#       an_port_port_2         uvm_analysis_imp_port_2     -     @752 
+#       an_port_port_3         uvm_analysis_imp_port_3     -     @760 
+#       an_port_reset          uvm_analysis_imp_reset      -     @776 
+#     ctrl_agent               control_agent               -     @599 
+#       control_agent_driver   control_driver              -     @991 
+#         rsp_port             uvm_analysis_port           -     @1006
+#         seq_item_port        uvm_seq_item_pull_port      -     @998 
+#       control_agent_monitor  control_monitor             -     @1014
+#         mon_an_port          uvm_analysis_port           -     @1034
+#       control_agent_seqr     uvm_sequencer               -     @882 
+#         rsp_export           uvm_analysis_export         -     @889 
+#         seq_item_export      uvm_seq_item_pull_imp       -     @983 
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     mem_agent                memory_agent                -     @606 
+#       memory_agent_driver    memory_driver               -     @1159
+#         rsp_port             uvm_analysis_port           -     @1174
+#         seq_item_port        uvm_seq_item_pull_port      -     @1166
+#       memory_agent_monitor   memory_monitor              -     @1182
+#         mon_an_port          uvm_analysis_port           -     @1206
+#       memory_agent_seqr      uvm_sequencer               -     @1050
+#         rsp_export           uvm_analysis_export         -     @1057
+#         seq_item_export      uvm_seq_item_pull_imp       -     @1151
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     port_0_agent             port_agent                  -     @552 
+#       port_0_driver          port_driver                 -     @1387
+#         rsp_port             uvm_analysis_port           -     @1402
+#         seq_item_port        uvm_seq_item_pull_port      -     @1394
+#       port_0_monitor         port_monitor                -     @1412
+#         mon_an_port          uvm_analysis_port           -     @1429
+#       port_0_seqr            port_sequencer              -     @1223
+#         export_port          uvm_analysis_export         -     @1332
+#         fifo                 uvm_tlm_analysis_fifo #(T)  -     @1340
+#           analysis_export    uvm_analysis_imp            -     @1379
+#           get_ap             uvm_analysis_port           -     @1371
+#           get_peek_export    uvm_get_peek_imp            -     @1355
+#           put_ap             uvm_analysis_port           -     @1363
+#           put_export         uvm_put_imp                 -     @1347
+#         rsp_export           uvm_analysis_export         -     @1230
+#         seq_item_export      uvm_seq_item_pull_imp       -     @1324
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     port_0_cov               uvm_component               -     @820 
+#       analysis_imp           uvm_analysis_imp            -     @827 
+#     port_1_agent             port_agent                  -     @560 
+#       port_1_driver          port_driver                 -     @1610
+#         rsp_port             uvm_analysis_port           -     @1625
+#         seq_item_port        uvm_seq_item_pull_port      -     @1617
+#       port_1_monitor         port_monitor                -     @1635
+#         mon_an_port          uvm_analysis_port           -     @1652
+#       port_1_seqr            port_sequencer              -     @1446
+#         export_port          uvm_analysis_export         -     @1555
+#         fifo                 uvm_tlm_analysis_fifo #(T)  -     @1563
+#           analysis_export    uvm_analysis_imp            -     @1602
+#           get_ap             uvm_analysis_port           -     @1594
+#           get_peek_export    uvm_get_peek_imp            -     @1578
+#           put_ap             uvm_analysis_port           -     @1586
+#           put_export         uvm_put_imp                 -     @1570
+#         rsp_export           uvm_analysis_export         -     @1453
+#         seq_item_export      uvm_seq_item_pull_imp       -     @1547
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     port_1_cov               uvm_component               -     @835 
+#       analysis_imp           uvm_analysis_imp            -     @842 
+#     port_2_agent             port_agent                  -     @568 
+#       port_2_driver          port_driver                 -     @1833
+#         rsp_port             uvm_analysis_port           -     @1848
+#         seq_item_port        uvm_seq_item_pull_port      -     @1840
+#       port_2_monitor         port_monitor                -     @1858
+#         mon_an_port          uvm_analysis_port           -     @1875
+#       port_2_seqr            port_sequencer              -     @1669
+#         export_port          uvm_analysis_export         -     @1778
+#         fifo                 uvm_tlm_analysis_fifo #(T)  -     @1786
+#           analysis_export    uvm_analysis_imp            -     @1825
+#           get_ap             uvm_analysis_port           -     @1817
+#           get_peek_export    uvm_get_peek_imp            -     @1801
+#           put_ap             uvm_analysis_port           -     @1809
+#           put_export         uvm_put_imp                 -     @1793
+#         rsp_export           uvm_analysis_export         -     @1676
+#         seq_item_export      uvm_seq_item_pull_imp       -     @1770
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     port_2_cov               uvm_component               -     @850 
+#       analysis_imp           uvm_analysis_imp            -     @857 
+#     port_3_agent             port_agent                  -     @576 
+#       port_3_driver          port_driver                 -     @2056
+#         rsp_port             uvm_analysis_port           -     @2071
+#         seq_item_port        uvm_seq_item_pull_port      -     @2063
+#       port_3_monitor         port_monitor                -     @2081
+#         mon_an_port          uvm_analysis_port           -     @2098
+#       port_3_seqr            port_sequencer              -     @1892
+#         export_port          uvm_analysis_export         -     @2001
+#         fifo                 uvm_tlm_analysis_fifo #(T)  -     @2009
+#           analysis_export    uvm_analysis_imp            -     @2048
+#           get_ap             uvm_analysis_port           -     @2040
+#           get_peek_export    uvm_get_peek_imp            -     @2024
+#           put_ap             uvm_analysis_port           -     @2032
+#           put_export         uvm_put_imp                 -     @2016
+#         rsp_export           uvm_analysis_export         -     @1899
+#         seq_item_export      uvm_seq_item_pull_imp       -     @1993
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     port_3_cov               uvm_component               -     @865 
+#       analysis_imp           uvm_analysis_imp            -     @872 
+#     rst_agent                reset_agent                 -     @592 
+#       reset_agent_driver     reset_driver                -     @2223
+#         rsp_port             uvm_analysis_port           -     @2238
+#         seq_item_port        uvm_seq_item_pull_port      -     @2230
+#       reset_agent_monitor    reset_monitor               -     @2246
+#         mon_an_port          uvm_analysis_port           -     @2266
+#       reset_agent_seqr       uvm_sequencer               -     @2114
+#         rsp_export           uvm_analysis_export         -     @2121
+#         seq_item_export      uvm_seq_item_pull_imp       -     @2215
+#         arbitration_queue    array                       0     -    
+#         lock_queue           array                       0     -    
+#         num_last_reqs        integral                    32    'd1  
+#         num_last_rsps        integral                    32    'd1  
+#     scb                      scoreboard                  -     @722 
+#       an_port_control        uvm_analysis_imp_control    -     @2280
+#       an_port_memory         uvm_analysis_imp_memory     -     @2296
+#       an_port_port_0         uvm_analysis_imp_port_0     -     @2304
+#       an_port_port_1         uvm_analysis_imp_port_1     -     @2312
+#       an_port_port_2         uvm_analysis_imp_port_2     -     @2320
+#       an_port_port_3         uvm_analysis_imp_port_3     -     @2328
+#       an_port_reset          uvm_analysis_imp_reset      -     @2288
+#     virtual_sequencer        virtual_sequencer           -     @613 
+#       rsp_export             uvm_analysis_export         -     @620 
+#       seq_item_export        uvm_seq_item_pull_imp       -     @714 
+#       arbitration_queue      array                       0     -    
+#       lock_queue             array                       0     -    
+#       num_last_reqs          integral                    32    'd1  
+#       num_last_rsps          integral                    32    'd1  
+# --------------------------------------------------------------------
+# 
+# UVM_INFO src/test/environment/agent_reset/reset_monitor.svh(46) @ 5: uvm_test_top.env.rst_agent.reset_agent_monitor [reset_agent_monitor] Reset inactive!
+# UVM_INFO src/test/environment/agent_reset/reset_monitor.svh(46) @ 15: uvm_test_top.env.rst_agent.reset_agent_monitor [reset_agent_monitor] Reset active!
+# UVM_INFO src/test/environment/agent_reset/reset_monitor.svh(46) @ 25: uvm_test_top.env.rst_agent.reset_agent_monitor [reset_agent_monitor] Reset inactive!
+# UVM_INFO src/test/environment/coverage/coverage.svh(134) @ 4525: uvm_test_top.env.cov [cov] Ports coverage   = 25.00%
+# UVM_INFO src/test/environment/coverage/coverage.svh(135) @ 4525: uvm_test_top.env.cov [cov] Memory coverage  = 66.67%
+# UVM_INFO src/test/environment/coverage/coverage.svh(136) @ 4525: uvm_test_top.env.cov [cov] Control coverage = 100.00%
+# UVM_INFO src/test/environment/coverage/coverage.svh(137) @ 4525: uvm_test_top.env.cov [cov] Data coverage    = 24.46%
+# UVM_INFO src/test/environment/coverage/coverage.svh(138) @ 4525: uvm_test_top.env.cov [cov] Event coverage   = 23.87%
+# UVM_INFO src/test/environment/scoreboard.svh(229) @ 4525: uvm_test_top.env.scb [scb] BYTE MATCH / TOTAL : 416 / 416
+# UVM_INFO src/test/environment/scoreboard.svh(230) @ 4525: uvm_test_top.env.scb [scb] BYTE FAIL : 0%
+# UVM_INFO src/test/environment/scoreboard.svh(231) @ 4525: uvm_test_top.env.scb [scb] CORRECT PACKETS : 3
+# UVM_INFO src/test/environment/scoreboard.svh(232) @ 4525: uvm_test_top.env.scb [scb] DROPPED PACKETS : 0
+# UVM_INFO src/test/environment/scoreboard.svh(234) @ 4525: uvm_test_top.env.scb [scb] PORT 0: INPUT PACKETS: 3 ; OUTPUT PACKETS : 0
+# UVM_INFO src/test/environment/scoreboard.svh(234) @ 4525: uvm_test_top.env.scb [scb] PORT 1: INPUT PACKETS: 0 ; OUTPUT PACKETS : 0
+# UVM_INFO src/test/environment/scoreboard.svh(234) @ 4525: uvm_test_top.env.scb [scb] PORT 2: INPUT PACKETS: 0 ; OUTPUT PACKETS : 0
+# UVM_INFO src/test/environment/scoreboard.svh(234) @ 4525: uvm_test_top.env.scb [scb] PORT 3: INPUT PACKETS: 0 ; OUTPUT PACKETS : 0
+# UVM_INFO src/test/environment/environment.svh(137) @ 4525: uvm_test_top.env [env] Port 0 Coverage = 100.00%
+# UVM_INFO src/test/environment/environment.svh(138) @ 4525: uvm_test_top.env [env] Port 1 Coverage = 0.00%
+# UVM_INFO src/test/environment/environment.svh(139) @ 4525: uvm_test_top.env [env] Port 2 Coverage = 0.00%
+# UVM_INFO src/test/environment/environment.svh(140) @ 4525: uvm_test_top.env [env] Port 3 Coverage = 0.00%
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   22
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [UVMTOP]     1
+# [cov]     5
+# [env]     4
+# [reset_agent_monitor]     3
+# [scb]     8
+# ** Note: $finish    : /opt/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 4525 ns  Iteration: 109  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 12:10:43 on Feb 09,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1

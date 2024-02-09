@@ -13,3 +13,7 @@ vsim -viewcov saved.ucdb -do "coverage report -file coverage_report.txt -byfile 
 vsim -c #bash mode; doesn't open the GUI
 
 quit -f #force quits the simulation; doesn't ask for confirmation
+
+-do "transcipt on" #shows transcipt in console
+
+write transcipt transcript_test_no_7.log #save transcript to file transcript_test_no_7.log; only from Questa GUI
