@@ -1,18 +1,37 @@
 #!/usr/bin/tclsh
 
-# run from terminal with: ./script.tcl testcase1 testcase2 etc.
+# run from terminal with: ./script.tcl VERBOSITY testcase1 testcase2 etc.
+# First argument is verbosity: NONE, LOW, MEDIUM, HIGH, FULL, DEBUG
 
-# set the testcases names to check
+# set the testcases names and verbosity to check
 set testlist {test test_no_1 test_no_2 test_no_4 test_no_5 test_no_6 test_no_7 test_no_8 test_no_9 test_no_11 test_no_12}
+set verblist {NONE, LOW, MEDIUM, HIGH, FULL, DEBUG}
 
-puts "Number of testcases found: $argc" 
+if { $argc < 2 } { 
+     puts "Not enough arguments. At least 2 arguments nedded. First argument: verbosity. Following arguments: testcase names."
+     exit 2 
+}
 
-# variable to memorise the testcase number
-set i 1
+puts "Number of testcases found: [incr argc -1]" 
+
+# set a variable to memorise the current testcase number
+set i 0
+
+# get the verbosity from the arguments; if the verbosity is not correct, the MEDIUM verbosity level will be used
+set verbosity [lindex $argv 0]
+
+if { [lsearch $verblist $verbosity] <= 0 } {
+     puts "Verbosity level not valid. The default MEDIUM verbosity level will be used instead."
+     set verbosity {MEDIUM}
+}
+
+# get the testcases names from the arguments 
+set testargv [lreplace $argv 0 0]
 
 # go to throu each testcase given as argument
-foreach {test} $argv {
- 
+foreach {test} $testargv {
+     incr i 1
+
      # check if the test exists in the list
      if { [lsearch $testlist $test] >= 0 } {
 
@@ -37,7 +56,7 @@ foreach {test} $argv {
           if { ![file exists coverage_report] } { file mkdir coverage_report }
 
           # simulate the testcase and save the ucdb file
-          exec sh -c "vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=$test +UVM_VERBOSITY=LOW work.testbench -do \"coverage save -onexit ucdb/ucdb_$test.ucdb; run -all; quit -f; exit\""        
+          exec sh -c "vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=$test +UVM_VERBOSITY=$verbosity work.testbench -do \"coverage save -onexit ucdb/ucdb_$test.ucdb; run -all; quit -f; exit\""        
 
           # copy the transcipt file which contains the entire simulation as a log file
           file copy -force transcript log/transcript_$test.log
@@ -52,12 +71,12 @@ foreach {test} $argv {
           puts "Testcase $i done. Closing..." 
 
      } else { puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Testcase $i $test not found! Testcase skipped!" }
-     incr i 1
 }
 
 # check whether there were any ran testcases
 if { [info exists runtests] } {
-     puts "[llength $runtests] successful ran testcases."
+     # display the number of successful and unsuccessful simulations. It is not related to the scoreboard or coverage results.
+     puts "Testcase simulation --- SUCCESS/FAIL : [llength $runtests]/[incr i -[llength $runtests]] ---"
 
      # if there is only one testcase there is no need to combine multiple coverage reports into one
      if { [llength $runtests] > 1 } {
