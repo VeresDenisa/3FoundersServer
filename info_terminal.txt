@@ -1,9 +1,10 @@
 git clone https://github.com/NAME/REPOSITORYNAME  #clone the repository in the current directory
+git pull                                          #pull repository
 git add .                                         #add all changes to the commit area
 git commit -m "Write something."                  #commit all the changes on the local repository
 git push origin main                              #push all the commits on the remote repository
 
-.gitignore
+.gitignore #put the file in the root of the repository and mark the files to ignore
 
 
 
