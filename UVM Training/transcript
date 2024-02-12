@@ -14,5 +14,5 @@
 # //  18 U.S.C. Section 1905.
 # //
 # saved.ucdb opened as coverage dataset "saved"
-# coverage report -file coverage_report/coverage_report_test_no_12.txt -byfile -detail -noannotate -option -cvg
+# coverage report -file coverage_report/coverage_report_test.txt -byfile -detail -noannotate -option -cvg
 #  quit -f

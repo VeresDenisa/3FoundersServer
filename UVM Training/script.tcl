@@ -10,7 +10,7 @@ foreach {test} $argv {
 
      if { [lsearch $testlist $test] >= 0 } {
 
-          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Start testing testcase $i..." 
+          puts "Start testing testcase $i..." 
 
           puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Testcase found. Executing..."  
 
@@ -51,7 +51,7 @@ foreach {test} $argv {
           puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Coverage saved."
 
 
-          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Testcase $i done. Closing..." 
+          puts "Testcase $i done. Closing..." 
 
      } else { puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Testcase $i $test not found! Testcase skipped!" }
      incr i 1
