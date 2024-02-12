@@ -6,6 +6,11 @@ puts "Number of testcases found: $argc"
 
 set i 1
 
+set scriptfile [open "script.do" w+]
+puts $scriptfile "echo ceva"
+close $scriptfile
+exec "./script.do"
+
 foreach {test} $argv {
 
      if { [lsearch $testlist $test] >= 0 } {
@@ -23,7 +28,7 @@ foreach {test} $argv {
           set scriptfile [open "script.do" w+]
 
           puts $scriptfile "vlog -work work -f files.f"
-
+          
           close $scriptfile
           exec "./script.do"
 
@@ -66,7 +71,7 @@ if { [info exists runtests] } {
           set scriptfile [open "script.do" w+]
 
           puts $scriptfile "vcover merge ucdb/ucdb_final.ucdb $runtests"
-
+          
           close $scriptfile
           exec "./script.do"
 
@@ -82,5 +87,5 @@ if { [info exists runtests] } {
 
           puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] Saved final coverage report."
 
-     } else { puts "One successfull testcase run. No necessary cover merge." }
-} else { puts "Not even one succesfull testcase run!"}
+     } else { puts "One successfull testcase run. No coverage merge necessary." }
+}
