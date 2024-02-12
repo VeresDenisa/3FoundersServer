@@ -2,7 +2,6 @@
 *.mpf
 *.mti
 *.vcd
-*.ucdb
 
 UVM\ Training/work/
 UVM\ Training/transcript
