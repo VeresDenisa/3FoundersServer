@@ -8,7 +8,9 @@ set i 1
 
 set scriptfile [open "script.do" w+]
 puts $scriptfile "echo ceva"
+file attributes "script.do" -permissions  +x
 close $scriptfile
+
 exec "./script.do"
 
 foreach {test} $argv {
