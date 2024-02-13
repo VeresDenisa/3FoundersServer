@@ -1,7 +1,10 @@
 #!/usr/bin/tclsh
 
-# run from terminal with: ./script.tcl VERBOSITY testcase1 testcase2 etc.
+# Run from terminal with: ./script.tcl VERBOSITY testcase1 testcase2 etc.
+# Ex. ./script.tcl DEBUG test test_no_1 test_no_2 test_no_3 test_no_4 test_no_5 test_no_6 test_no_7 test_no_8 test_no_9 test_no_10 test_no_11 test_no_12
 # First argument is verbosity: NONE, LOW, MEDIUM, HIGH, FULL, DEBUG
+# Following arguments are testcase names.
+
 
 # set the testcases names and verbosity to check
 set testlist {test test_no_1 test_no_2 test_no_4 test_no_5 test_no_6 test_no_7 test_no_8 test_no_9 test_no_11 test_no_12}
@@ -28,7 +31,7 @@ if { [lsearch $verblist $verbosity] <= 0 } {
 # get the testcases names from the arguments 
 set testargv [lreplace $argv 0 0]
 
-# go to throu each testcase given as argument
+# go to through each testcase given as argument
 foreach {test} $testargv {
      incr i 1
 
@@ -52,11 +55,12 @@ foreach {test} $testargv {
           
           # create the specified directories if they don't exist
           if { ![file exists ucdb] } { file mkdir ucdb }
+          if { ![file exists wave] } { file mkdir wave }
           if { ![file exists log] } { file mkdir log }
           if { ![file exists coverage_report] } { file mkdir coverage_report }
 
-          # simulate the testcase and save the ucdb file
-          exec sh -c "vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=$test +UVM_VERBOSITY=$verbosity work.testbench -do \"coverage save -onexit ucdb/ucdb_$test.ucdb; run -all; quit -f; exit\""        
+          # simulate the testcase and save the ucdb and wlf file
+          exec sh -c "vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=$test +UVM_VERBOSITY=$verbosity -wlf wave/wave_$test.wlf work.testbench -do \"log -r /*; coverage save -onexit ucdb/ucdb_$test.ucdb; run -all; quit -f; exit\""      
 
           # copy the transcipt file which contains the entire simulation as a log file
           file copy -force transcript log/transcript_$test.log
