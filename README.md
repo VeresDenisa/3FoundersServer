@@ -22,4 +22,4 @@ The design can be found at: ... .
 
 To run the script use: ./scipt.tcl UVM_VERBOSITY TESTCASE1 TESTCASE2 TESTCASE3 (ex. ./scipt.tcl LOW test_no_4 test)
 
-To view the waveform open the GUI, open the wlf file and add the required items in the waveform.
+To view the waveform open the GUI, open the wlf file and add the required items in the waveform. To save an image of the waveform, zoom full and export as png/bmp.

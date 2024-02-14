@@ -14,8 +14,14 @@ CTRL + SHIFT + C  #copy from terminal
 CTRL + SHIFT + V  #paste in terminal
 
 
-pwd         #print working directory
-ls          #list content of directory (-a - prints all files, including hidden files)
-cd          #go to ... (.. - one level up, blank - home)
-chmode +x   #make file executable (r - readable, w - writable)
-touch NAME  #create new file
+pwd                 #print working directory
+ls                  #list content of directory 
+    -a              #prints all files, including hidden files
+    -ls             #prints all files with size, permissions, etc.
+cd                  #go to ... 
+    ..              #one level up
+                    #home
+chmode              #change file permissions
+    +x              #add execution permission
+touch NAME          #create new file
+xdg-open NAME       #open an image file

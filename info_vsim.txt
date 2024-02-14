@@ -29,7 +29,7 @@ log -r /* #save all items in region in the wlf file so that adding items in wave
 
 add wave -r /* #add all items in region in waveform
 
-dd wave -position insertpoint wave_test:/testbench/DUT/* #add only the DUT signals in the waveform
+add wave -position insertpoint wave_test:/testbench/DUT/* #add only the DUT signals in the waveform
 
 
 coverage save -onexit saved.ucdb #save the coverage file after exit
