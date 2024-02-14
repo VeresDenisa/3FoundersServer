@@ -49,7 +49,7 @@ foreach {test} $testargv {
           puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Testcase found. Executing..."  
 
           # compile in the order specified by files.f
-          exec sh -c "vlog -work work -f files.f"
+          exec sh -c "vlog -f files.f"
 
           puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Compilation success. Running ..."
           

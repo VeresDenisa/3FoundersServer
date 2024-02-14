@@ -1,19 +1,39 @@
 Useful: https://www.tcl.tk/man/tcl/TclCmd/contents.html
 
-do run.do #do the run.do file in the questa command line
-
-add wave -r /* #add all item in design in wave (do before run)
  
-vlog -work work -f files.f #compile all files from files.f in the specified order using the verilog compiler
+vlog -f files.f #compile all files from files.f in the specified order using the verilog compiler
 
-vsim -classdebug -voptargs="+acc" +UVM_TESTNAME=test_no_7 +UVM_VERBOSITY=HIGH work.testbench -do "coverage save -onexit saved.ucdb; run -all; exit" #simulate and run the specified test and save coverage report in the saved.ucdb file after exit
+vsim -classdebug -voptargs="+acc" +UVM_TESTNAME=testname +UVM_VERBOSITY=verbosity work.testbench #simulate the specified test with the specified verbosity using optimization
 
-vsim -viewcov saved.ucdb -do "coverage report -file coverage_report.txt -byfile -detail -noannotate -option -cvg" #convert the ucdb file to the final_coverage_report.txt file
+do run.do #do the run.do file in the questa command line
 
 vsim -c #bash mode; doesn't open the GUI
 
 quit -f #force quits the simulation; doesn't ask for confirmation
 
+exit #exits the program
+
+quit -sim #quits the simulation
+
+run -all #run the simulation
+
+
 -do "transcipt on" #shows transcipt in console
 
-write transcipt transcript_test_no_7.log #save transcript to file transcript_test_no_7.log; only from Questa GUI
+write transcipt transcriptname.log #save transcript to file transcriptname.log; only from Questa GUI
+
+
+vsim -wlf wavename.wlf #save the waveform as wavename.wlf
+
+log -r /* #save all items in region in the wlf file so that adding items in waveform after run doesn't require a rerun; you have to run the test in order to save the data
+
+add wave -r /* #add all items in region in waveform
+
+dd wave -position insertpoint wave_test:/testbench/DUT/* #add only the DUT signals in the waveform
+
+
+coverage save -onexit saved.ucdb #save the coverage file after exit
+
+vsim -viewcov covname.ucdb #opens the coverage file
+
+coverage report -file coverage_report.txt -byfile -detail -noannotate -option -cvg #convert the coverage file to a text file

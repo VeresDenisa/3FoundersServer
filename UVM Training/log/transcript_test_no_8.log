@@ -1,5 +1,5 @@
-# vsim -c -classdebug -voptargs="+acc" "+UVM_TESTNAME=test_no_8" "+UVM_VERBOSITY=DEBUG" work.testbench -do "coverage save -onexit ucdb/ucdb_test_no_8.ucdb; run -all; quit -f; exit" 
-# Start time: 12:54:27 on Feb 12,2024
+# vsim -c -classdebug -voptargs="+acc" "+UVM_TESTNAME=test_no_8" "+UVM_VERBOSITY=DEBUG" -wlf wave/wave_test_no_8.wlf work.testbench -do "log -r /*; coverage save -onexit ucdb/ucdb_test_no_8.ucdb; run -all; quit -f; exit" 
+# Start time: 12:11:47 on Feb 14,2024
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c linux_x86_64 Aug 17 2018
@@ -46,7 +46,8 @@
 # Loading work.port_fsm(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading /opt/questa/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# coverage save -onexit ucdb/ucdb_test_no_8.ucdb
+# log -r /*
+#  coverage save -onexit ucdb/ucdb_test_no_8.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -968,5 +969,5 @@
 # ** Note: $finish    : /opt/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 1795 ns  Iteration: 109  Instance: /testbench
 # Saving coverage database on exit...
-# End time: 12:54:31 on Feb 12,2024, Elapsed time: 0:00:04
+# End time: 12:11:51 on Feb 14,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 1
