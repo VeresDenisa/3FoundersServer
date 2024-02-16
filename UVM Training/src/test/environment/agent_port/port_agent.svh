@@ -22,7 +22,7 @@ endclass : port_agent
 function void port_agent::build_phase(uvm_phase phase);
   super.build_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
 
   if(!uvm_config_db#(port_agent_config)::get(this, "", "config", agent_config_h))
     `uvm_fatal(this.get_name(), "Failed to get config object");
@@ -40,16 +40,16 @@ function void port_agent::build_phase(uvm_phase phase);
   mon = port_monitor:: type_id::create($sformatf("port_%0d_monitor", agent_config_h.get_port_number()),  this);
   uvm_config_db#(virtual port_interface)::set(this, $sformatf("port_%0d_monitor*", agent_config_h.get_port_number()), "port_interface", port_i);
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 function void port_agent::connect_phase(uvm_phase phase);
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> CONNECT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> CONNECT <--"), UVM_DEBUG);
 
   if(agent_config_h.get_is_active() == UVM_ACTIVE) begin
     drv.seq_item_port.connect(seqr.seq_item_export);
     mon.an_port.connect(seqr.export_port);
   end 
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> CONNECT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> CONNECT <--"), UVM_DEBUG);
 endfunction : connect_phase

@@ -36,7 +36,7 @@ function void control_agent::build_phase(uvm_phase phase);
   // DEFAULT PASSIVE
   uvm_config_db#(virtual control_interface)::set(this, "control_agent_monitor*", "control_interface", ctrl_i);
  
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 function void control_agent::connect_phase(uvm_phase phase);

@@ -36,7 +36,7 @@ function void memory_agent::build_phase(uvm_phase phase);
   // DEFAULT PASSIVE
   uvm_config_db#(virtual memory_interface)::set(this, "memory_agent_monitor*", "memory_interface", mem_i);
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 function void memory_agent::connect_phase(uvm_phase phase);

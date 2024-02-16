@@ -20,20 +20,20 @@ endclass : memory_driver
 function void memory_driver::build_phase (uvm_phase phase);
   super.build_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
 
   item = new();
   
   if(!uvm_config_db#(virtual memory_interface)::get(this, "", "memory_interface", mem_i))
     `uvm_fatal(this.get_name(), "Failed to get memory interface");
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 task memory_driver::reset_phase(uvm_phase phase);
   super.reset_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> RESET <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> RESET <--"), UVM_DEBUG);
 
   phase.raise_objection(this);
   mem_i.mem_data  <= 8'h00;
@@ -42,14 +42,14 @@ task memory_driver::reset_phase(uvm_phase phase);
   mem_i.mem_rd_wr <= 1'b0;
   phase.drop_objection(this);
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> RESET <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> RESET <--"), UVM_DEBUG);
 endtask : reset_phase
 
 task memory_driver::configure_phase(uvm_phase phase);
   logic [7:0]first_memory_config_data[4];
   super.configure_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> CONFIGURE <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> CONFIGURE <--"), UVM_DEBUG);
 
   phase.raise_objection(this);
   
@@ -65,14 +65,14 @@ task memory_driver::configure_phase(uvm_phase phase);
   
   phase.drop_objection(this);
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> CONFIGURE <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> CONFIGURE <--"), UVM_DEBUG);
 endtask : configure_phase  
     
     
 task memory_driver::main_phase(uvm_phase phase);
   super.main_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> MAIN <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> MAIN <--"), UVM_DEBUG);
 
   forever begin : command_loop
     seq_item_port.get_next_item(item);
@@ -80,5 +80,5 @@ task memory_driver::main_phase(uvm_phase phase);
     seq_item_port.item_done();
   end : command_loop
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> MAIN <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> MAIN <--"), UVM_DEBUG);
 endtask : main_phase

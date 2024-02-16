@@ -43,7 +43,7 @@ function void control_sequence::set_da_options(bit [7:0]memory_data[4]);
 endfunction : set_da_options
 
 task control_sequence::body();
-  `uvm_info(this.get_name(), $sformatf("Started sequence"), UVM_MEDIUM);
+  `uvm_info(get_name(), $sformatf("Started sequence"), UVM_MEDIUM);
   for(int i = 1; i <= nr_items; i++) begin : loop_packets
     packet = data_packet::type_id::create("packet");
     packet.set_parameters(.min_length(min_length), .max_length(max_length), .memory_data(memory_data), .random_DA(random_DA));
@@ -56,8 +56,8 @@ task control_sequence::body();
       packet.set_status_low(.position(position));
     if(no_delay == 1'b1) packet.delay = 0;
     start_item(packet);
-    `uvm_info(this.get_name(), $sformatf("Created packet 'd%0d: %s", i, packet.convert2string), UVM_HIGH);
+    `uvm_info(get_name(), $sformatf("Created packet 'd%0d: %s", i, packet.convert2string), UVM_HIGH);
     finish_item(packet);
   end : loop_packets
-  `uvm_info(this.get_name(), $sformatf("Finished sequence"), UVM_MEDIUM);
+  `uvm_info(get_name(), $sformatf("Finished sequence"), UVM_MEDIUM);
 endtask : body

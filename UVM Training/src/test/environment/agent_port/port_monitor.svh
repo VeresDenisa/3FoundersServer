@@ -20,7 +20,7 @@ endclass : port_monitor
 function void port_monitor::build_phase (uvm_phase phase);
   super.build_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
   
   item_previous = new();
   item_current = new();
@@ -30,21 +30,21 @@ function void port_monitor::build_phase (uvm_phase phase);
   if(!uvm_config_db#(virtual port_interface)::get(this, "", "port_interface", port_i))
     `uvm_fatal(this.get_full_name(), "Failed to get port interface");    
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG); 
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG); 
 endfunction : build_phase   
 
 task port_monitor::run_phase(uvm_phase phase);
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> RUN <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> RUN <--"), UVM_DEBUG);
 
   forever begin : forever_monitor
     @(port_i.monitor);
     port_i.receive(item_current);
     if(!item_current.compare(item_previous) || item_current.ready === 1'b1) begin
-      `uvm_info(this.get_name(), $sformatf("Monitored PORT: %s", item_current.convert2string), UVM_HIGH);
+      `uvm_info(get_name(), $sformatf("Monitored PORT: %s", item_current.convert2string), UVM_HIGH);
       item_previous.copy(item_current);
       an_port.write(item_current);
     end
   end : forever_monitor
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> RUN <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> RUN <--"), UVM_DEBUG);
 endtask : run_phase

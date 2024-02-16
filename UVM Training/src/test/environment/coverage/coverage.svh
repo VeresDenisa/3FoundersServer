@@ -126,11 +126,11 @@ endfunction : write_reset
 
 
 function void coverage::report_phase(uvm_phase phase);
-  `uvm_info(this.get_name(), $sformatf("---> EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
-  `uvm_info(this.get_name(), $sformatf("Ports coverage   = %.2f%%", port_cvg[0].get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Memory coverage  = %.2f%%", memory_cvg.get_coverage()),  UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Control coverage = %.2f%%", control_cvg.get_coverage()), UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Data coverage    = %.2f%%", data_cvg.get_coverage()),    UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("Event coverage   = %.2f%%", event_cvg.get_coverage()),   UVM_LOW);
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("Ports coverage   = %.2f%%", port_cvg[0].get_coverage()), UVM_LOW);
+  `uvm_info(get_name(), $sformatf("Memory coverage  = %.2f%%", memory_cvg.get_coverage()),  UVM_LOW);
+  `uvm_info(get_name(), $sformatf("Control coverage = %.2f%%", control_cvg.get_coverage()), UVM_LOW);
+  `uvm_info(get_name(), $sformatf("Data coverage    = %.2f%%", data_cvg.get_coverage()),    UVM_LOW);
+  `uvm_info(get_name(), $sformatf("Event coverage   = %.2f%%", event_cvg.get_coverage()),   UVM_LOW);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> REPORT <--"), UVM_DEBUG);
 endfunction : report_phase

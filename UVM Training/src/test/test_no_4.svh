@@ -28,7 +28,7 @@ endclass : test_no_4
   function void test_no_4::build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-    `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+    `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
 
     env_config = new(.is_cluster(UNIT), .number_of_ports(`NO_OF_PORTS));
     uvm_config_db #(environment_config)::set(this, "env*", "config", env_config);
@@ -52,17 +52,17 @@ endclass : test_no_4
     v_seq = virtual_sequence::type_id::create("v_seq");
     v_seq.set_parameters(.bandwidth({100, 100, 100, 100}));
 
-    `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+    `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
   endfunction : build_phase
     
   function void test_no_4::start_of_simulation_phase(uvm_phase phase);
-    `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> START OF SIMULATION <--"), UVM_DEBUG);
+    `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> START OF SIMULATION <--"), UVM_DEBUG);
     uvm_top.print_topology();
-    `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> START OF SIMULATION <--"), UVM_DEBUG);
+    `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> START OF SIMULATION <--"), UVM_DEBUG);
   endfunction : start_of_simulation_phase
     
   task test_no_4::main_phase(uvm_phase phase);
-    `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> MAIN <--"), UVM_DEBUG);
+    `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> MAIN <--"), UVM_DEBUG);
     
     phase.raise_objection(this);
     fork
@@ -74,5 +74,5 @@ endclass : test_no_4
     join
     phase.drop_objection(this);  
 
-    `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> MAIN <--"), UVM_DEBUG);  
+    `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> MAIN <--"), UVM_DEBUG);  
   endtask : main_phase

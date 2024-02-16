@@ -55,7 +55,7 @@ endclass : environment
 function void environment::build_phase(uvm_phase phase);
   super.build_phase(phase);
   
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
   
   if(!uvm_config_db #(environment_config)::get(this, "", "config", env_config))
     `uvm_fatal(this.get_name(), "Failed to get environment config");
@@ -80,10 +80,10 @@ function void environment::build_phase(uvm_phase phase);
     
   v_seqr = virtual_sequencer::type_id::create("virtual_sequencer", this);
   
-  scb = scoreboard::type_id::create("scb", this);
+  //scb = scoreboard::type_id::create("scb", this);
   cov = coverage::  type_id::create("cov", this);  
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 function void environment::connect_phase(uvm_phase phase);
@@ -91,6 +91,7 @@ function void environment::connect_phase(uvm_phase phase);
     v_seqr.port_seqr[i] = prt_agent[i].seqr;
   end
     
+  /*  
   ctrl_agent.mon.an_port.connect(scb.an_port_control);
   mem_agent.mon.an_port.connect(scb.an_port_memory);
   rst_agent.mon.an_port.connect(scb.an_port_reset);
@@ -99,7 +100,8 @@ function void environment::connect_phase(uvm_phase phase);
   prt_agent[1].mon.an_port.connect(scb.an_port_port_1);
   prt_agent[2].mon.an_port.connect(scb.an_port_port_2);
   prt_agent[3].mon.an_port.connect(scb.an_port_port_3);
-  
+  */
+
   prt_agent[0].mon.an_port.connect(cov.an_port_port_0);
   prt_agent[1].mon.an_port.connect(cov.an_port_port_1);
   prt_agent[2].mon.an_port.connect(cov.an_port_port_2);

@@ -36,7 +36,7 @@ function void reset_agent::build_phase(uvm_phase phase);
   // DEFAULT PASSIVE
   uvm_config_db#(virtual reset_interface)::set(this, "reset_agent_monitor*", "reset_interface", rst_i);
   
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> BUILD <--"), UVM_DEBUG);
 endfunction : build_phase
 
 function void reset_agent::connect_phase(uvm_phase phase);

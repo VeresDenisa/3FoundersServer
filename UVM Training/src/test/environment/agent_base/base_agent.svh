@@ -28,7 +28,7 @@ endclass : base_agent
 
       
 function void base_agent::build_phase(uvm_phase phase);  
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> BUILD <--"), UVM_DEBUG);
   super.build_phase(phase);
   
   if(!uvm_config_db#(ss_agent_config)::get(this, "", "config", agent_config_h))
@@ -45,11 +45,11 @@ endfunction : build_phase
     
     
 function void base_agent::connect_phase(uvm_phase phase);
-  `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> CONNECT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("---> ENTER PHASE: --> CONNECT <--"), UVM_DEBUG);
 
   if(agent_config_h.get_is_active() == UVM_ACTIVE) begin
     drv.seq_item_port.connect(seqr.seq_item_export);
   end
 
-  `uvm_info(this.get_name(), $sformatf("<--- EXIT PHASE: --> CONNECT <--"), UVM_DEBUG);
+  `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> CONNECT <--"), UVM_DEBUG);
 endfunction : connect_phase
