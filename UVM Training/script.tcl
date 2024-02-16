@@ -65,7 +65,7 @@ foreach {test} $testargv {
           # copy the transcipt file which contains the entire simulation as a log file
           file copy -force transcript log/transcript_$test.log
 
-          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Transcript saved."
+          puts "[clock format [clock seconds] -format "%d/%m/%Y %H:%M:%S"] $test: Transcript and waveform saved."
 
           # save the coverage report as a text file
           exec sh -c "vsim -c -viewcov ucdb/ucdb_$test.ucdb -do \"coverage report -file coverage_report/coverage_report_$test.txt -byfile -detail -noannotate -option -cvg; quit -f; exit\""
