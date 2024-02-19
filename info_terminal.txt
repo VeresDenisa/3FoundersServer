@@ -25,3 +25,7 @@ chmode              #change file permissions
     +x              #add execution permission
 touch NAME          #create new file
 xdg-open NAME       #open an image file
+
+
+code    #Visual Studio Code NAME
+vsim    #QuestaSim NAME

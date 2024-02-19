@@ -20,10 +20,12 @@ class scoreboard extends uvm_scoreboard;
 
   data_packet packet_port_queue[4][$];
   data_packet packet_port_in[4];
-  data_packet packet_port_out[4];
+  bit [7:0] bit_port_queue[4][$];
 
   int packet_port_in_position[4];
-  int packet_port_out_position[4];
+
+  bit [7:0] bit_temp[4];
+  int miss_temp[4];
   
   data_packet data_packet_temp[4];
   port_item port_item_temp[4];
@@ -37,16 +39,19 @@ class scoreboard extends uvm_scoreboard;
   bit port_unknown;
   int port_current;
 
-  int dropped_packet_nr;
-  int packet_input_nr[4], packet_output_nr[4], packet_control_nr;
-  int packet_match[4], packet_miss[4];
-  int miss[4], match[4];
+  int dropped_packet_nr; // nr of dropped packets at control
+  int lost_packet_nr; // nr of packets lost at port
+  int lost_bits_nr; //extra bits in the output
+  int packet_output_nr[4],  packet_input_nr; // number of packets received and sent forward
+  int packet_match[4], packet_miss[4]; // if the entire packet is miss/match
+  int miss[4], match[4]; // all and any individual miss/matchs 
   
   function new (string name = "scoreboard", uvm_component parent = null);
     super.new(name, parent);
   endfunction : new
   
   extern function void build_phase(uvm_phase phase);
+  extern function void check_phase(uvm_phase phase);
   extern function void report_phase(uvm_phase phase);
     
   extern function void write_control(control_item t);
@@ -86,13 +91,10 @@ function void scoreboard::build_phase(uvm_phase phase);
       port_prev[i].read = 1'b0;
       port_prev[i].ready = 1'b0;  
       packet_port_in[i] = new("packet_port_in");
-      packet_port_out[i] = new("packet_port_out");
       port_item_temp[i] = new("port_item_temp");
       packet_port_in_position[i] = 0;
-      packet_port_out_position[i] = 0;
-      packet_input_nr[i] = 0;
       packet_output_nr[i] = 0;
-      packet_control_nr[i] = 0; 
+      packet_input_nr[i] = 0; 
       miss[i] = 0;
       match[i] = 0;
       packet_match[i] = 0;
@@ -100,6 +102,9 @@ function void scoreboard::build_phase(uvm_phase phase);
       data_packet_temp[i] = new("data_packet_temp");
     end
     
+    lost_packet_nr = 0;
+    packet_input_nr = 0;
+    lost_bits_nr = 0;
     port_unknown = 1'b0;
     dropped_packet_nr = 0;
     port_current = 0;
@@ -120,15 +125,6 @@ function void scoreboard::build_phase(uvm_phase phase);
       endcase
       packet_port_in_position[port_current]++;
     end: write_input_packet
-    else begin : write_output_packet
-      case(packet_port_out_position[port_ind])
-        0: packet_port_out[port_ind].da     = data;
-        1: packet_port_out[port_ind].sa     = data;
-        2: packet_port_out[port_ind].length = data;
-        default: packet_port_out[port_ind].payload.push_back(data);
-      endcase
-      packet_port_out_position[port_ind]++;
-    end : write_output_packet
   endfunction : make_packet
 
 
@@ -138,11 +134,6 @@ function void scoreboard::build_phase(uvm_phase phase);
       packet_port_in[port_current].payload.delete();
       packet_port_in_position[port_current] = 0;
     end: write_input_packet
-    else begin : write_output_packet
-      packet_port_queue[port_current].pop_front();
-      packet_port_out[port_ind].payload.delete();
-      packet_port_out_position[port_ind] = 0;
-    end : write_output_packet
   endfunction : end_packet
     
   
@@ -201,31 +192,74 @@ function void scoreboard::build_phase(uvm_phase phase);
         port_prev[i].ready = 1'b0;
         status_prev = 1'b0;
         packet_port_in_position[i] = 0;
-        packet_port_out_position[i] = 0;
         packet_port_queue[i].delete();
+        bit_port_queue[i].delete();
       end 
       port_current = 0;
     end: reset_all    
   endfunction : write_reset
   
-  
+     
+  function void scoreboard::check_phase(uvm_phase phase);
+    `uvm_info(get_name(), $sformatf("---> EXIT PHASE: --> CHECK <--"), UVM_MEDIUM);
+    
+    for(int i = 0; i < 4; i++) begin
+      if(bit_port_queue[i].size !== 0) begin : info_in_port
+        `uvm_info(get_name(), $sformatf("Port %0d sent valid data.", i), UVM_FULL);
+        if(packet_port_queue[i].size !== 0) begin : info_was_sent_to_port
+          data_packet_temp[i] = packet_port_queue[i].pop_front();
+          miss_temp[i] = miss[i];
+          
+          for(int j = 0; j < data_packet_temp[i].length + 3; j++) begin : compare_8_bits
+            bit_temp[i] = bit_port_queue[i].pop_front();
+
+            case(j)
+              0: if(bit_temp[i] === data_packet_temp[i].da) match[i]++; else miss[i]++;
+              1: if(bit_temp[i] === data_packet_temp[i].sa) match[i]++; else miss[i]++;
+              2: if(bit_temp[i] === data_packet_temp[i].length) match[i]++; else miss[i]++;
+              default: if(bit_temp[i] === data_packet_temp[i].payload.pop_front()) match[i]++; else miss[i]++;
+            endcase
+
+          end : compare_8_bits
+
+          if(miss[i] !== miss_temp[i]) begin : not_matched_bits
+            `uvm_info(get_name(), $sformatf("Port %0d missed a packet.", i), UVM_FULL);
+            packet_miss[i]++;
+          end : not_matched_bits
+          else begin : matched_all_bits
+            `uvm_info(get_name(), $sformatf("Port %0d matched a packet.", i), UVM_FULL);
+            packet_match[i]++;
+          end : matched_all_bits
+
+          
+        end : info_was_sent_to_port
+        else begin : info_was_not_sent_to_port
+          `uvm_info(get_name(), $sformatf("Port %0d didn't receive any valid data.", i), UVM_FULL);
+          lost_bits_nr = lost_bits_nr + bit_port_queue[i].size;
+        end : info_was_not_sent_to_port
+      end : info_in_port
+
+      else begin : no_info_in_port
+        `uvm_info(get_name(), $sformatf("Port %0d didn't send any valid data.", i), UVM_FULL);
+        if(packet_port_queue[i].size !== 0) begin : info_was_sent_to_port
+          `uvm_info(get_name(), $sformatf("Port %0d did receive valid data.", i), UVM_FULL);
+          lost_packet_nr = lost_packet_nr + packet_port_queue[i].size;
+        end : info_was_sent_to_port
+        else begin : info_was_not_sent_to_port
+          `uvm_info(get_name(), $sformatf("Port %0d didn't receive any valid data.", i), UVM_FULL);
+        end : info_was_not_sent_to_port
+      end : no_info_in_port
+    end
+
+    `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> CHECK <--"), UVM_MEDIUM);
+  endfunction : check_phase
+
+
   function void scoreboard::make_port_packet(port_item t, int port_ind);
     if(port_prev[port_ind].read == 1'b1 && port_prev[port_ind].ready == 1'b1 && t.ready == 1'b1) begin : read_port
       `uvm_info(get_name(), $sformatf("A valid read was made from port %0d.", port_ind), UVM_DEBUG);
 
-      if(packet_port_queue[port_ind].size >= 0) begin : check_port_queue
-        data_packet_temp[port_ind] = packet_port_queue[port_ind].pop_front();
-
-        make_packet(t.port, 1'b1, port_ind);
-
-        if(data_packet_temp[port_ind].payload.size() + 3 <= packet_port_out_position[port_ind]) begin : save_out_packet
-          `uvm_info(get_name(), $sformatf("A packet from port %0d was finished.", port_ind), UVM_DEBUG);
-          end_packet(1'b1, port_ind);
-        end : save_out_packet
-
-        packet_port_queue[port_ind].push_front(data_packet_temp[port_ind]);
-
-      end : check_port_queue
+      bit_port_queue[port_ind].push_back(t.port);
     end : read_port
     port_prev[port_ind].copy(t);
   endfunction : make_port_packet
@@ -254,5 +288,16 @@ function void scoreboard::build_phase(uvm_phase phase);
     
   function void scoreboard::report_phase(uvm_phase phase);
     `uvm_info(get_name(), $sformatf("---> EXIT PHASE: --> REPORT <--"), UVM_MEDIUM);
+    `uvm_info(get_name(), $sformatf("Number of valid packets: %0d", packet_input_nr), UVM_LOW);
+    `uvm_info(get_name(), $sformatf("Number of dropped packets: %0d", dropped_packet_nr), UVM_LOW);
+    `uvm_info(get_name(), $sformatf("Number of lost packets: %0d", lost_packet_nr), UVM_LOW);
+    for(int i = 0; i < 4; i++) begin
+      `uvm_info(get_name(), $sformatf("PORT %0d: Number of packets: %0d", i, packet_output_nr[i]), UVM_LOW);
+      `uvm_info(get_name(), $sformatf("PORT %0d: Number of matched packets: %0d", i, packet_match[i]), UVM_LOW);
+      `uvm_info(get_name(), $sformatf("PORT %0d: Number of missed packets: %0d", i, packet_miss[i]), UVM_LOW);
+      `uvm_info(get_name(), $sformatf("PORT %0d: Number of matched 8 bits: %0d", i, match[i]), UVM_LOW);
+      `uvm_info(get_name(), $sformatf("PORT %0d: Number of missed 8 bits: %0d", i, miss[i]), UVM_LOW);
+    end
+    `uvm_info(get_name(), $sformatf("Number of lost 8 bits: %0d", lost_bits_nr), UVM_LOW);
     `uvm_info(get_name(), $sformatf("<--- EXIT PHASE: --> REPORT <--"), UVM_MEDIUM);
   endfunction : report_phase

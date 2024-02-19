@@ -35,3 +35,10 @@ coverage save -onexit saved.ucdb #save the coverage file after exit
 vsim -viewcov covname.ucdb #opens the coverage file
 
 coverage report -file coverage_report.txt -byfile -detail -noannotate -option -cvg #convert the coverage file to a text file
+
+
+
+For fast running use:
+
+vlog -f files.f
+vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=test +UVM_VERBOSITY=DEBUG work.testbench -do "run -all"
