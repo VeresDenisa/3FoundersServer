@@ -1,0 +1,10 @@
+../../cluster-lvl-switch-uvm-tb/design/switch/reg_decoder.v
+../../cluster-lvl-switch-uvm-tb/design/switch/reg_rtl.v
+../../cluster-lvl-switch-uvm-tb/design/switch/reg_top.v
+../../cluster-lvl-switch-uvm-tb/design/switch/fifo_module.v
+../../cluster-lvl-switch-uvm-tb/design/switch/fsm_wd_module.v
+../../cluster-lvl-switch-uvm-tb/design/switch/fsm_module.v
+../../cluster-lvl-switch-uvm-tb/design/switch/fsm_top.v
+../../cluster-lvl-switch-uvm-tb/design/switch/port_top.v
+../../cluster-lvl-switch-uvm-tb/design/switch/switch_top.v
+src/testbench.sv
