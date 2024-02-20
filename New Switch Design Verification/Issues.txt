@@ -1,0 +1,1 @@
+1. In switch_top, when instantiating reg_top, 9th argument doesn't match with the argument from reg_top. (port_out vs reg_data2port_out)

@@ -1,9 +1,12 @@
 
 module testbench;  
-  bit clk, rst_n, sw_enable_in, read_out, mem_sel_en, mem_wr_rd_s, mem_ack, port_ready[4];
-  bit[7:0] data_in, mem_addr, mem_wr_data, mem_rd_data, port_out[4];
+  bit clk, rst_n, sw_enable_in, read_out, mem_sel_en, mem_wr_rd_s, mem_ack;
+  bit port_ready[4];
+  bit[7:0] data_in, mem_addr, mem_wr_data, mem_rd_data;
   
-  logic port_read[4];
+  bit[7:0] port_out[4];
+  
+  bit port_read[4];
 
   // CLOCK //
   initial begin
