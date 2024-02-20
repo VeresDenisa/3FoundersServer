@@ -42,3 +42,5 @@ For fast running use:
 
 vlog -f files.f
 vsim -c -classdebug -voptargs=\"+acc\" +UVM_TESTNAME=test +UVM_VERBOSITY=DEBUG work.testbench -do "run -all"
+
+vsim -c -classdebug -voptargs=\"+acc\" work.testbench -do "log -r /*; run -all; add wave sim:/testbench/*"

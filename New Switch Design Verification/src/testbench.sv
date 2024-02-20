@@ -1,12 +1,24 @@
+parameter NUM_OF_PORTS = 4;
+parameter FIFO_SIZE = 64;
+parameter WORD_WIDTH = 8;
 
 module testbench;  
-  bit clk, rst_n, sw_enable_in, read_out, mem_sel_en, mem_wr_rd_s, mem_ack;
-  bit port_ready[4];
-  bit[7:0] data_in, mem_addr, mem_wr_data, mem_rd_data;
+  bit clk, rst_n;
   
-  bit[7:0] port_out[4];
+  bit [WORD_WIDTH-1:0] data_in;
+  bit sw_enable_in;
+
+  bit [NUM_OF_PORTS-1:0] port_read;
   
-  bit port_read[4];
+  bit mem_sel_en, mem_wr_rd_s;
+  bit [WORD_WIDTH-1:0] mem_addr;
+  bit [WORD_WIDTH-1:0] mem_wr_data; 
+
+  bit read_out;
+  bit [(NUM_OF_PORTS*WORD_WIDTH)-1:0] port_out;
+  bit [NUM_OF_PORTS-1:0] port_ready;
+  bit [WORD_WIDTH-1:0] mem_rd_data;
+  bit mem_ack;
 
   // CLOCK //
   initial begin
