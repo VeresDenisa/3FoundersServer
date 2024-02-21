@@ -3,6 +3,8 @@ git pull                                          #pull repository
 git add .                                         #add all changes to the commit area
 git commit -m "Write something."                  #commit all the changes on the local repository
 git push origin main                              #push all the commits on the remote repository
+git reset --hard origin                           #forcefully gets the latest remote repository (all local changes will be lost)
+
 
 .gitignore #put the file in the root of the repository and mark the files to ignore
 
