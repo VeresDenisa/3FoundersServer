@@ -1,5 +1,101 @@
-1. mem_ack is x one clock after memory write.
-# 30: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: 0
-# 40: Configure memory: SEL: 1, WR_RD: 1, ADDR: 00, WR_DATA: 55, RD_DATA: 00, ACK: 0
-# 50: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: x
-# 60: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: 0
+1. DUT_PORT/ffe is always 'z', even if a port fifo si full.
+
+
+1. rd_data doesn't work as expected.
+The rd_data is not what was expected (00000015, 00002500, 00350000, 45000000).
+
+mem_ack always '0' if mem_addr is higher than number of ports. Maybe mem_addr should have the size related to the number of ports, not to the word width?
+
+#  20: Memory: sel_en:0 wr_rd_s:0 addr:00 ack:0 wr_data:00 rd_data:00000000
+#  30: Memory: sel_en:1 wr_rd_s:1 addr:00 ack:0 wr_data:15 rd_data:00000000
+#  40: Memory: sel_en:1 wr_rd_s:1 addr:01 ack:1 wr_data:25 rd_data:00000000
+#  50: Memory: sel_en:1 wr_rd_s:1 addr:02 ack:1 wr_data:35 rd_data:00000000
+#  60: Memory: sel_en:1 wr_rd_s:1 addr:03 ack:1 wr_data:45 rd_data:00000000
+#  70: Memory: sel_en:1 wr_rd_s:0 addr:00 ack:1 wr_data:00 rd_data:00000000
+#  80: Memory: sel_en:1 wr_rd_s:0 addr:01 ack:1 wr_data:00 rd_data:00000035
+#  90: Memory: sel_en:1 wr_rd_s:0 addr:02 ack:1 wr_data:00 rd_data:00004500
+# 100: Memory: sel_en:1 wr_rd_s:0 addr:03 ack:1 wr_data:00 rd_data:00000000
+# 110: Memory: sel_en:0 wr_rd_s:0 addr:00 ack:1 wr_data:00 rd_data:00000000
+# 120: Memory: sel_en:0 wr_rd_s:0 addr:00 ack:0 wr_data:00 rd_data:00000000
+
+
+
+2. Setting port_read to 'F' causes port_out_0/1/2/3 to turn into 'xx' immediatelly and port_ready into 'F' after 64 cycles (64 is fifo size), even if no data_in was sent to the switch.
+I looked closer at the probllem and DUT_PORT/DUT_PORT_FIFO/rd_pos seemed to be involved somehow. When port_read is set to 1 the counter starts, rd_pos increments with each cycle passed until it reaches '3F' and then port_ready is set to 'F'. If port_read is set to 'F' and then to '0' after a few cycles, then rd_pos stops incrementing.
+
+Setting port_read to 'F'.
+--- Memory configured ---
+#  90: port_read:0000 port_out:00000000 port_ready:0000
+# 100: port_read:1111 port_out:00000000 port_ready:0000
+# 110: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 740: port_read:1111 port_out:xxxxxxxx port_ready:1111
+# 750: port_read:1111 port_out:00000000 port_ready:1111
+
+Setting port_read to 'F' and sending a packet at the same time.
+--- Memory configured (port 1 = 25) ---
+#  90: data_in:00 sw_enable_in:0
+#  90: port_read:0000 port_out:00000000 port_ready:0000
+# 100: data_in:25 sw_enable_in:1
+# 100: port_read:1111 port_out:00000000 port_ready:0000
+# 110: data_in:00 sw_enable_in:1
+# 110: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 120: data_in:01 sw_enable_in:1
+# 120: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 130: data_in:02 sw_enable_in:1
+# 130: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 140: data_in:00 sw_enable_in:0
+# 140: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 730: port_read:1111 port_out:xxxxxxxx port_ready:0000
+# 740: port_read:1111 port_out:xxxxxxxx port_ready:0011
+# 750: port_read:1111 port_out:00000202 port_ready:0011
+# 760: port_read:1111 port_out:00000000 port_ready:0011
+# 770: port_read:1111 port_out:00000000 port_ready:1111
+
+
+Sending a packet and setting port_read to 'F' after a few cycles.
+--- Memory configured (port 1 = 25) ---
+#  90: data_in:00 sw_enable_in:0
+# 100: data_in:25 sw_enable_in:1
+# 100: port_read:0000 port_out:00000000 port_ready:0000
+# 110: data_in:00 sw_enable_in:1
+# 120: data_in:01 sw_enable_in:1
+# 130: data_in:02 sw_enable_in:1
+-||--||--||--||--||--||--||--||-
+# 200: data_in:09 sw_enable_in:1
+# 200: port_read:1111 port_out:00000000 port_ready:0000
+# 210: data_in:0a sw_enable_in:1
+# 210: port_read:1111 port_out:xxxx0202 port_ready:0000
+# 220: data_in:0b sw_enable_in:1
+# 220: port_read:1111 port_out:xxxx0303 port_ready:0000
+# 230: data_in:0c sw_enable_in:1
+# 230: port_read:1111 port_out:xxxx0404 port_ready:0000
+-||--||--||--||--||--||--||--||--||--||--||--||--||--||-
+# 680: port_read:1111 port_out:xxxx3131 port_ready:0000
+# 690: port_read:1111 port_out:xxxx0000 port_ready:0000
+# 700: port_read:1111 port_out:xxxx0000 port_ready:1100
+# 840: port_read:1111 port_out:xxxx0000 port_ready:1111
+# 850: port_read:1111 port_out:00000000 port_ready:1111
+
+
+
+3. E un spike in DUT_PORT/DUT_PORT_FSM/FSM_DUT/feed_wd_nxt si in DUT_PORT/DUT_PORT_FSM/FSM_DUT/wr_en si in DUT_PORT/DUT_PORT_FSM/FSM_DUT/wr_en_nxt.
+
+
+4. Packet's first 3 bytes are not sent to port_out.
+
+--- Memory configured (port 1 = 25) ---
+#  90: data_in:00 sw_enable_in:0
+#  90: port_read:0000 port_out:00000000 port_ready:0000
+# 100: data_in:25 sw_enable_in:1
+# 110: data_in:00 sw_enable_in:1
+# 120: data_in:01 sw_enable_in:1
+# 130: data_in:02 sw_enable_in:1
+# 140: data_in:00 sw_enable_in:0
+# 190: port_read:0000 port_out:00000000 port_ready:0000
+# 200: port_read:0100 port_out:00000000 port_ready:0000
+# 210: port_read:0100 port_out:00000200 port_ready:0000
+# 220: port_read:0100 port_out:00000000 port_ready:0000
+
+
+
+
