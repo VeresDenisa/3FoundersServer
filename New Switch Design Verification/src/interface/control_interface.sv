@@ -1,45 +1,48 @@
 import item_pack::*;
 
 interface control_interface(input bit clock);
-  bit [7:0] data;
-  bit       data_status;  
+  bit [7:0] data_in;
+  bit       sw_enable_in;  
+  bit       read_out;  
   
   clocking driver@(posedge clock);
-    output data;
-    output data_status;
+    output data_in;
+    output sw_enable_in;
   endclocking
   
   clocking monitor@(posedge clock);
-    input data;
-    input data_status;
+    input data_in;
+    input sw_enable_in;
+    input read_out;
   endclocking
   
   task send(data_packet packet);
     @(driver);
-    driver.data        <= packet.da;
-    driver.data_status <= packet.data_status[0];
+    driver.data_in      <= packet.da;
+    driver.sw_enable_in <= packet.sw_enable_in[0];
     
     @(driver);
-    driver.data        <= packet.sa;
-    driver.data_status <= packet.data_status[1];
+    driver.data_in      <= packet.sa;
+    driver.sw_enable_in <= packet.sw_enable_in[1];
     
     @(driver);
-    driver.data        <= packet.length;
-    driver.data_status <= packet.data_status[2];
+    driver.data_in      <= packet.length;
+    driver.sw_enable_in <= packet.sw_enable_in[2];
     
     foreach(packet.payload[i]) begin
       @(driver);
-      driver.data        <= packet.payload[i];
-      driver.data_status <= packet.data_status[i+3];
+      driver.data_in      <= packet.payload[i];
+      driver.sw_enable_in <= packet.sw_enable_in[i+3];
     end
     
-    @(driver) driver.data_status <= packet.data_status[packet.length+4];
+    @(driver) driver.sw_enable_in <= packet.sw_enable_in[packet.length+4];
     
     repeat(packet.delay) @(driver);
   endtask : send
   
   function automatic void receive(ref control_item item);
-    item.data        = monitor.data;
-    item.data_status = monitor.data_status;
+    item.data_in      = monitor.data_in;
+    item.sw_enable_in = monitor.sw_enable_in;
+    item.read_out     = monitor.read_out;
   endfunction : receive
 endinterface : control_interface

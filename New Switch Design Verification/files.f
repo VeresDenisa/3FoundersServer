@@ -1,4 +1,4 @@
-design/design.sv
+../../cluster-lvl-switch-uvm-tb/design/switch/switch_top.v
 src/pack/item_pack.sv
 src/pack/seq_pack.sv
 src/interface/reset_interface.sv
