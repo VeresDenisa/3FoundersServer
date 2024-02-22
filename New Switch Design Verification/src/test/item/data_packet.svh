@@ -7,7 +7,7 @@ class data_packet extends uvm_sequence_item;
   rand bit [7:0]   sa;
   rand bit [7:0]   length;
        bit [7:0]   payload[$];
-       bit         data_status[$];
+       bit         sw_enable_in[$];
   
   int delay = 5;
   int max_length = 255, min_length = 0;
@@ -43,9 +43,9 @@ function void data_packet::set_all(bit[7:0] da, bit[7:0] sa, bit[7:0] length, bi
     payload.push_front(pay);
   end
   for(int i=0; i<length+3; i++) begin
-    data_status.push_front(1'b1);
+    sw_enable_in.push_front(1'b1);
   end
-  data_status.push_back(1'b0);
+  sw_enable_in.push_back(1'b0);
 endfunction : set_all
     
 function bit data_packet::compare(data_packet item);
@@ -65,7 +65,7 @@ function bit data_packet::check();
 endfunction
 
 function void data_packet::set_status_low(int position);
-  data_status[position] = 1'b0;
+  sw_enable_in[position] = 1'b0;
 endfunction : set_status_low
     
 function void data_packet::set_parameters(int min_length = 0, int max_length = 255, bit [7:0] memory_data[4] = {0, 85, 170, 255}, random_predefined_enum random_DA = PREDEFINED);
@@ -80,9 +80,9 @@ function void data_packet::post_randomize();
     payload.push_front($urandom_range(0,255));
   end
   for(int i=0; i<length+3; i++) begin
-    data_status.push_front(1'b1);
+    sw_enable_in.push_front(1'b1);
   end
-  data_status.push_back(1'b0);
+  sw_enable_in.push_back(1'b0);
 endfunction : post_randomize
 
 function string data_packet::convert2string();
