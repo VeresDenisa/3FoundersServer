@@ -140,19 +140,19 @@ function void scoreboard::build_phase(uvm_phase phase);
   function void scoreboard::write_control(control_item t);
     `uvm_info(get_name(), $sformatf("Received item : %s ", t.convert2string()), UVM_FULL);
     
-    if(t.data_status == 1'b1) begin : data_status_activated
+    if(t.sw_enable_in == 1'b1) begin : data_status_activated
       `uvm_info(get_name(), $sformatf("Data status active."), UVM_DEBUG);
       if(port_unknown !== 1'b0) begin : middle_of_transaction
         `uvm_info(get_name(), $sformatf("Add item to input packet in middle of transaction."), UVM_DEBUG);
-        make_packet(t.data);
+        make_packet(t.data_in);
       end : middle_of_transaction
       else if(port_unknown === 1'b0) begin : choose_port
         `uvm_info(get_name(), $sformatf("Add item to input packet at the beginning of transaction."), UVM_DEBUG);
-        port_indexes = mem_data.find_index with (item == t.data);
+        port_indexes = mem_data.find_index with (item == t.data_in);
         if(port_indexes.size() > 0) begin : DA_is_mem
           port_unknown = 1'b1; 
           port_current = port_indexes.pop_front(); 
-          make_packet(t.data);
+          make_packet(t.data_in);
           `uvm_info(get_name(), $sformatf("Memory data and received item match at beginning of transaction."), UVM_DEBUG);
         end : DA_is_mem
         else begin
@@ -170,15 +170,15 @@ function void scoreboard::build_phase(uvm_phase phase);
       end : save_packet
     end : data_status_deactivated
     
-    status_prev = t.data_status;
+    status_prev = t.sw_enable_in;
 
   endfunction : write_control
   
   function void scoreboard::write_memory(memory_item t);
     `uvm_info(get_name(), $sformatf("Received item : %s ", t.convert2string()), UVM_FULL);
-    if(t.mem_en && t.mem_rd_wr) begin
+    if(t.mem_sel_en && t.mem_wr_rd_s) begin
       `uvm_info(get_name(), $sformatf("Memory data changed."), UVM_DEBUG);
-      mem_data[t.mem_add] = t.mem_data;
+      mem_data[t.mem_addr] = t.mem_wr_data;
     end
   endfunction : write_memory
   

@@ -96,12 +96,12 @@ function void coverage::write_control(control_item t);
   control_cvg.sample();
   event_cvg.sample();
   
-  if(t.data_status == 1'b1) begin : build_data_packet
+  if(t.sw_enable_in == 1'b1) begin : build_data_packet
     case(position)
-      0: data_pck.da = t.data;
-      1: data_pck.sa = t.data;
-      2: data_pck.length = t.data;
-      default: data_pck.payload.push_back(t.data);
+      0: data_pck.da = t.data_in;
+      1: data_pck.sa = t.data_in;
+      2: data_pck.length = t.data_in;
+      default: data_pck.payload.push_back(t.data_in);
     endcase
     position++;
     if(position >= 3 && data_pck.length == data_pck.payload.size()) begin : build_data_packet_done

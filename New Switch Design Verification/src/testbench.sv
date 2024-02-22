@@ -21,13 +21,16 @@ module testbench;
   				 port_3_i(clk);
   
   
-  switch DUT(
+  switch_top DUT(
     .clk(clk),
-    .rst_n(rst_n_i.reset),
+    .rst_n(rst_i.reset),
     .sw_enable_in(ctrl_i.sw_enable_in),
     .read_out(ctrl_i.read_out),
     .data_in(ctrl_i.data_in),
-    .port_out('{port_0_i.port, port_1_i.port, port_2_i.port, port_3_i.port}),
+    .port_out_0(port_0_i.port),
+    .port_out_1(port_1_i.port),
+    .port_out_2(port_2_i.port),
+    .port_out_3(port_3_i.port),
     .port_ready('{port_0_i.ready, port_1_i.ready, port_2_i.ready, port_3_i.ready}),
     .port_read('{port_0_i.read, port_1_i.read, port_2_i.read, port_3_i.read}),
     .mem_sel_en(mem_i.mem_sel_en),
