@@ -1,3 +1,5 @@
-1. In switch_top, when instantiating reg_top, 9th argument doesn't match with the argument from reg_top. (port_out vs reg_data2port_out)
-2. In reg_top, ack has random x values for one clock.
-3. In reg_top and reg_decoder, wr_en has different sizes (8 and 1).
+1. mem_ack is x one clock after memory write.
+# 30: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: 0
+# 40: Configure memory: SEL: 1, WR_RD: 1, ADDR: 00, WR_DATA: 55, RD_DATA: 00, ACK: 0
+# 50: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: x
+# 60: Configure memory: SEL: 0, WR_RD: 0, ADDR: 00, WR_DATA: 00, RD_DATA: 00, ACK: 0
