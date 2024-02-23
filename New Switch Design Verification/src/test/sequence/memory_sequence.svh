@@ -31,13 +31,18 @@ task memory_sequence::body();
     end
     else begin
       item.set_address(addr);
-      item.set_enable();
+      item.set_enable(1'b1, 1'b0); //read transaction
     end
     finish_item(item);
     
     item = memory_item::type_id::create("item_default");
     start_item(item);
     item.set_enable(0,0);
+    finish_item(item);
+    
+    start_item(item);
+    finish_item(item);
+    start_item(item);
     finish_item(item);
   end : loop
 endtask : body

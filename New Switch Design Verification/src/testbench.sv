@@ -20,6 +20,14 @@ module testbench;
   				 port_2_i(clk), 
   				 port_3_i(clk);
   
+
+initial begin
+  port_0_i.ready = 1'b1;
+  port_1_i.ready = 1'b1;
+  port_2_i.ready = 1'b1;
+  port_3_i.ready = 1'b1;
+end
+
   
   switch_top DUT(
     .clk(clk),

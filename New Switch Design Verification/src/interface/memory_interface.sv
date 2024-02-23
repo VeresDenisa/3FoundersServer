@@ -2,7 +2,7 @@ import item_pack::*;
 
 interface memory_interface(input bit clock);
   logic [7:0] mem_wr_data;
-  bit   [7:0] mem_rd_data;
+  bit   [31:0] mem_rd_data;
   bit   [7:0] mem_addr;
   bit         mem_sel_en;
   bit         mem_wr_rd_s;

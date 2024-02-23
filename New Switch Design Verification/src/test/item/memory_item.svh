@@ -4,7 +4,7 @@ class memory_item extends uvm_sequence_item;
   `uvm_object_utils(memory_item);
   
   rand logic [7:0] mem_wr_data;   // INPUT
-       bit   [7:0] mem_rd_data;   // OUTPUT
+       bit   [31:0] mem_rd_data;   // OUTPUT
   rand bit   [7:0] mem_addr;      // INPUT
        bit         mem_wr_rd_s;   // INPUT
        bit         mem_sel_en;    // INPUT
@@ -56,7 +56,7 @@ function void memory_item::set_item(logic [7:0] mem_wr_data, bit [1:0] mem_addr,
 endfunction : set_item
 
 function string memory_item::convert2string();
-  return $sformatf("mem_wr_rd_s: 'b%0h  mem_sel_en: 'b%0h  mem_ack: 'b%0h  mem_wr_data: 'h%0h  mem_rd_data: 'h%0h  mem_addr: 'h%0h", mem_wr_rd_s, mem_sel_en, mem_ack, mem_wr_data, mem_rd_data, mem_addr);
+  return $sformatf("mem_wr_rd_s: 'b%0h  mem_sel_en: 'b%0h  mem_ack: 'b%0h  mem_wr_data: 'h%0h  mem_rd_data: 'h%8h  mem_addr: 'h%0h", mem_wr_rd_s, mem_sel_en, mem_ack, mem_wr_data, mem_rd_data, mem_addr);
 endfunction : convert2string
 
 function bit memory_item::compare(memory_item item);

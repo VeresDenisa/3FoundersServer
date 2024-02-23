@@ -52,13 +52,19 @@ task memory_driver::configure_phase(uvm_phase phase);
   `uvm_info(this.get_name(), $sformatf("---> ENTER PHASE: --> CONFIGURE <--"), UVM_DEBUG);
 
   phase.raise_objection(this);
-  
+
+  item.set_item(8'h00, 2'b00, 1'b1, 1'b1);
+  mem_i.send(item);
+
   foreach(first_n_memory_config_data[i]) begin
     if(!uvm_config_db #(logic[7:0])::get(this, "", $sformatf("mem_data[%0d]", i), first_n_memory_config_data[i]))
       `uvm_fatal(this.get_name(), "Failed to get memory initial configuration data");
-    item.set_item(first_n_memory_config_data[i], i[1:0], 1'b1, 1'b1);
+    if(i == 3) item.set_item(first_n_memory_config_data[i], 2'b00, 1'b0, 1'b0);
+    else item.set_item(first_n_memory_config_data[i], i[1:0]+1, 1'b1, 1'b1);
     mem_i.send(item);
   end
+
+
   
   item.set_item(8'h00, 2'b00, 1'b0, 1'b0);
   mem_i.send(item);
