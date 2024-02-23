@@ -22,7 +22,7 @@ class memory_item extends uvm_sequence_item;
   extern function void set_address(bit [1:0] mem_addr);
   extern function void set_enable(bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1'b1);
     
-  extern function void set_item(logic [7:0] mem_wr_data, bit [1:0] mem_addr, bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1'b1);
+  extern function void set_item(logic [7:0] mem_wr_data = 8'h00, bit [1:0] mem_addr, bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1'b1);
 
   extern function string convert2string();
   extern function bit compare(memory_item item);
@@ -49,7 +49,7 @@ function void memory_item::set_enable(bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1
   this.mem_wr_rd_s = mem_wr_rd_s;
 endfunction : set_enable
 
-function void memory_item::set_item(logic [7:0] mem_wr_data, bit [1:0] mem_addr, bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1'b1);
+function void memory_item::set_item(logic [7:0] mem_wr_data = 8'h00, bit [1:0] mem_addr, bit mem_sel_en = 1'b1, bit mem_wr_rd_s = 1'b1);
   this.set_data(mem_wr_data);
   this.set_address(mem_addr);
   this.set_enable(mem_sel_en, mem_wr_rd_s);

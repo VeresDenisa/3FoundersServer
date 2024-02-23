@@ -31,7 +31,7 @@ class test extends uvm_test;
   environment env;  
   
   control_sequence ctrl_seq;
-  memory_sequence mem_seq[4];
+  memory_sequence mem_seq[5];
   virtual_sequence v_seq;
 
   environment_config env_config;
@@ -65,11 +65,12 @@ endclass : test
     ctrl_seq = control_sequence::type_id::create("ctrl_seq");
     ctrl_seq.set_da_options(first_memory_config_data);
     
-    ctrl_seq.set_parameters(.nr_items(4), .min_length(10), .no_random(1'b1));
+    ctrl_seq.set_parameters(.nr_items(2), .min_length(10), .no_random(1'b1));
     
-    for(int i = 0; i < 4; i++) begin
+    for(int i = 0; i < 5; i++) begin
       mem_seq[i] = memory_sequence::type_id::create("mem_seq");
-      mem_seq[i].set_parameters(.nr_items(1), .addr(i));
+      if(i == 4) mem_seq[i].set_parameters(.nr_items(3), .addr(2'b00), .sel(1'b0), .wr_rd(1'b0));
+      else mem_seq[i].set_parameters(.nr_items(1), .addr(i), .sel(1'b1), .wr_rd(1'b0));
     end    
 
     v_seq = virtual_sequence::type_id::create("v_seq");
@@ -90,7 +91,7 @@ endclass : test
     phase.raise_objection(this);
     fork
       v_seq.start(env.v_seqr);
-      //#200 ctrl_seq.start(env.ctrl_agent.seqr);
+      #100 ctrl_seq.start(env.ctrl_agent.seqr);
       for(int i = 0; i < 4; i++) mem_seq[i].start(env.mem_agent.seqr);
     join
     phase.drop_objection(this);  
